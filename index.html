@@ -5,10 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <title>Admission Form</title>
 </head>
 
@@ -19,7 +19,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Admission Form</title>
+        <title>Registration Form</title>
 
 
         <style>
@@ -49,11 +49,7 @@
                 
             }
 
-            .register-heading h1 {
-                margin-left: 10aa%;
-                margin-bottom: 10%;
-                color: #e9ecef;
-            }
+
 
             .register {
                 background: -webkit-linear-gradient(left, #e8dea6, #54f3c4);
@@ -88,13 +84,11 @@
                 margin-top:20px;
                 margin-bottom: 20px;
             }
-            .headimg{
+            .heading{
             width:380px;
-            padding-bottom :0px;
+            
             }
-            .form-control{
-            background: opaque;
-            }
+            
             img{
             marigin-bottom:0px;
             }
@@ -102,7 +96,7 @@
     </head>
 
     <body >
-    <img src="GyanHeader.png" class="headimg" alt="Gyan Academy Of Commerce and Science"> 
+    <img src="GyanHeader.png" class="heading" alt="Gyan Academy Of Commerce and Science"> 
      
         <div class="container register">
             <div class="row">
@@ -114,22 +108,22 @@
                         
                         <div class="row register-form">
                             <div class="col-md-12">
-                                <form autocomplete="on">
+                                <form autocomplete="off">
                                     <div class="form-group">
                                         <label for="name" class="labl"><strong>Name of Student *</strong></label>
                                         <input type="text" name="Name" id="name" class="form-control"
-                                            placeholder="Enter Your Name *" value="" required style="width:300px;height:25px;" autocomplete="name"/>
+                                            placeholder="Enter Your Name *" value="" required style="width:18rem;height:25px;" autocomplete="name"/>
                                     </div><br>
                                     
                                     <div class="form-group">
                                         <label for="phone" class="labl"><strong>Student's Contact Number*</strong></label>
                                         <input type="number" name="Phone" id="phone" class="form-control"
-                                            placeholder=" Contact Number *" value="" required style="width:300px;height:25px;" autocomplete="number" />
+                                            placeholder=" Contact Number *" value="" required style="width:18rem;height:25px;" autocomplete="number"/>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="email" class="labl"><strong>Email I'D*</strong></label><br>
                                         <input type="email" name="Email" id="email" class="form-control"
-                                            placeholder="Enter Your Email *" value="" required style="width:300px;height:25px;" autocomplete="email"/>
+                                            placeholder="Enter Your Email *" value="" required style="width:18rem;height:25px;" autocomplete="email" />
                                     </div><br>
                                     <div class="form-group">
                                         <label for="gender" class="labl"><strong>Gender *</strong></label><br>
@@ -139,25 +133,25 @@
                                     </div><br>
                                      <div class="form-group">
                                      <label for="dob" class="labl"><strong>Date Of Birth *</strong></label><br>
-                                     <input type="date" name="dob" id="dob" value="dob" required style="width:300px;height:25px;">
+                                     <input type="date" name="dob" id="dob" value="dob" required style="width:18rem;height:25px;">
                                      </div><br>
                                     <div class="form-group">
                                         <label for="pname" class="labl"><strong>Name of Parent *</strong></label>
                                         <input type="text" name="Name" id="pname" class="form-control"
-                                            placeholder="Enter Parent Name *" value="" required style="width:300px;height:25px;" autocomplete="name"/>
+                                            placeholder="Enter Parent Name *" value="" required style="width:18rem;height:25px;" />
                                     </div><br>
                                     <div class="form-group">
                                         <label for="pphone" class="labl"><strong>Parent's Contact Number *</strong></label>
                                         <input type="number" name="Phone" id="pphone" class="form-control"
-                                            placeholder="Contact Number *" value="" required style="width:300px;height:25px;" autocomplete="number"/>
+                                            placeholder="Contact Number *" value="" required style="width:18rem;height:25px;"/>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="address" class="labl"><strong>Enter your Residential Address *</strong></label>
-                                        <textarea name="address" id="address" cols="37.5" rows="3" placeholder="Enter your Current Address" autocomplete="address"></textarea>
+                                        <textarea name="address" id="address" cols="37.5" rows="3" placeholder="Enter your Current Address"></textarea>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="std" class="labl"><strong>Enter Your Class Studying *</strong></label>
-                                        <select class="form-control" id="std" required style="width:300px;height:25px;">
+                                        <select class="form-control" id="std" required style="width:18rem;height:25px;">
                                             <option>--Please choose an option--</option>
                                             <option value="8th">8th</option>
                                             <option value="9th">9th</option>
@@ -182,7 +176,7 @@
                                         <div class="form-group">
                                             <label for="scname" class="labl"><strong>School/College Name Your Studying *</strong></label><br>
                                             <input type="text" name="Name" id="scname" class="form-control"
-                                                placeholder="Enter School/College Name *" value="" required style="width:300px;height:25px;"/>
+                                                placeholder="Enter School/College Name *" value="" required style="width:18rem;height:25px;"/>
                                         </div><br>
                                         <div class="form-group">
                                             <label for="subjects" class="labl"><strong>Subject Required*</strong></label>
@@ -238,7 +232,7 @@
                                         <label for="ref" class="labl"><strong>How did you come to know about us! *</strong></label>
                                         <br>
                                         <div class="check">
-                                        <input type="text" name="ref" id="ref" placeholder="Enter the way you came to know about us" style="width:300px;height:25px;">
+                                        <input type="text" name="ref" id="ref" placeholder="Enter the way you came to know about us" style="width:18rem;height:25px;">
                                         
                                         </div>
 
