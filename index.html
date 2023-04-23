@@ -155,7 +155,7 @@
                                             placeholder="Contact Number *" value="" required style="width:18rem;height:25px;"/>
                                     </div><br>
                                     <div class="form-group">
-                                        <label for="address" class="labl"><strong>Enter your Residential Address *</strong></label>
+                                        <label for="address" class="labl" id="address"><strong>Enter your Residential Address *</strong></label>
                                         <textarea name="address" id="address" cols="37.5" rows="3" placeholder="Enter your Current Address"></textarea>
                                     </div><br>
                                     <div class="form-group">
@@ -288,8 +288,8 @@
                  var ref = document.getElementById("ref").value;
 
                 var url =
-                    "https://wa.me/918088263376?text="Hello , I need to Register/Enquire" +
-                    "%0a" +
+                    "https://wa.me/918088263376?text=" +
+
                     "Name of the student : "
                     + name +
                     "%0a" +
