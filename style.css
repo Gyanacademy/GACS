@@ -1,0 +1,78 @@
+h1{
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 15px;
+  }
+
+  nav div .navbar-collapse {
+    margin-left: 20px;
+  }
+  
+  .sticky-btn{
+    width: 150px;
+    position:sticky;
+    margin-top: 100px;
+    margin-left: 93%;
+    transform: rotate(-90deg);
+  }
+  .sticky-btn button a{
+    text-decoration: none;
+    color: black;
+  }
+  .about{
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+  h2{
+    margin-left: 20px;
+  }
+  .container1{
+    padding: 0 30px;
+  }
+  .bi-whatsapp  {
+    filter: invert(100%);
+  }
+  .bi-instagram{
+    filter: invert(100%);
+  }
+  .bi-facebook{
+    filter: invert(100%);
+  }
+.detail-pripol{
+ margin-top: 50px;
+ padding: 0 30px;
+}
+.contact{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.name, .address, .mail ,.call{
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-left: 50px;
+}
+.name{
+  font-size: 2.5rem;
+}
+.card{
+  margin-bottom: 10px;
+}
+.btn-link{
+  text-decoration: none;
+  color: black;
+}
+.faq{
+  padding: 20px 0;
+}
+.about-foot{
+  margin-left: 50px;
+}
+.navbar-toggler{
+  filter: invert(100%);
+}
+.courses{
+  padding: 5px 10px;
+  box-shadow:   5px 5px 5px 5px #a5a4a470;
+}
