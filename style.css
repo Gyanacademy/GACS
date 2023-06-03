@@ -76,3 +76,9 @@ h1{
   padding: 5px 10px;
   box-shadow:   5px 5px 5px 5px #a5a4a470;
 }
+@media (min-width:600px) {
+  .logo{
+    width:600px;
+    height:600px;
+  }
+}
