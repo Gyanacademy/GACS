@@ -82,3 +82,27 @@ h1{
     height:600px;
   }
 }
+.team{
+  padding: 10px 0;
+}
+.search-items{
+  /* display: none; */
+  background-color: white;
+
+}
+div .search-items ul li a{
+text-decoration: none;
+color: black;
+
+text-align: center;
+}
+div .search-items ul li{
+
+  list-style: none;
+}
+.search-items ul{
+  padding: 10px 5px;
+}
+.remove{
+  display: none;
+}
