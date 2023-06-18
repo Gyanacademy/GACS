@@ -34,6 +34,7 @@ function gowhatsapp() {
     var board = document.getElementById("board").value;
     var ref = document.getElementById("ref").value;
 
+    
     var url =
         "https://wa.me/918088263376?text=" +
 
@@ -112,7 +113,7 @@ function validation() {
     var dob = document.getElementById("dob").value;
     var pname = document.getElementById("pname").value;
     var pphone = document.getElementById("pphone").value;
-    var address = document.getElementById("address").value=text;
+    var address = document.getElementById("address").value = text;
     var std = document.getElementById("std").selected;
     var scname = document.getElementById("scname").value;
     var subjects = document.getElementById("subjects").checked;
@@ -120,150 +121,120 @@ function validation() {
     var mode = document.getElementById("mode").checked;
     var board = document.getElementById("board").checked;
     var ref = document.getElementById("ref").value;
-
+    var msg = "";
 
 
     if (name.value == "") {
-        alert("Name is Requires");
+        msg("Name is Requires");
 
 
         name.focus();
 
         return;
     }
-    if (phone.value == "") {
-        alert("Mobile nunber Required");
+    else if (phone.value == "") {
+        msg("Mobile nunber Required");
         phone.focus();
         return;
     }
-    if (email.value == "") {
-        alert("Email is required");
+    else if (email.value == "") {
+        msg("Email is required");
         email.focus();
         return;
     }
-    if (gender.value == "") {
-        alert("Gender is required");
+    else if (gender.checked == "") {
+        msg("Gender is required");
         gender.focus();
         return;
     }
-    if (dob.value == "") {
-        alert("Date of birth is required");
+    else if (dob.value == "") {
+        msg("Date of birth is required");
         dob.focus();
         return;
     }
-    if (pname.value == "") {
-        alert("Parent name is required");
+    else if (pname.value == "") {
+        msg("Parent name is required");
         pname.focus();
         return;
     }
-    if (address.value == "") {
-        alert("Address is required");
+    else if (address.value = text == "") {
+        msg("Address is required");
         address.focus();
         return;
     }
-    if (std.value == "") {
-        alert("class studying is needed");
+    else if (std.selected == "") {
+        msg("class studying is needed");
         std.focus();
         return;
     }
-    if (scname.value == "") {
-        alert("School /College  is needed");
+    else if (scname.value == "") {
+        msg("School /College  is needed");
         scname.focus();
         return;
     }
-    if (subjects.value == "") {
-        alert("Subjects is needed");
+    else if (subjects.checked == "") {
+        msg("Subjects is needed");
         subjects.focus();
         return;
     }
-    if (stream.value == "") {
-        alert("Stream is needed");
+    else if (stream.checked == "") {
+        msg("Stream is needed");
         stream.focus();
         return;
     }
-    if (mode.value == "") {
-        alert("Modeis needed");
+    else if (mode.checked == "") {
+        msg("Modeis needed");
         mode.focus();
         return;
     }
-    if (board.value == "") {
-        alert("Board is needed");
+    else if (board.checked == "") {
+        msg("Board is needed");
         board.focus();
         return;
     }
-    if (ref.value == "") {
-        alert("Refrence is needed");
+    else if(ref.value == "") {
+        msg("Refrence is needed");
         ref.focus();
         return;
     }
+    alert(msg);
+    
 
-    var url =
-        "https://wa.me/918088263376?text=" +
-
-        "Name of the student : "
-        + name +
-        "%0a" +
-        "%0a" +
-        "Students Contact Number: "
-        + phone +
-        "%0a" +
-        "%0a" +
-        "Email Id: "
-        + email +
-        "%0a" +
-        "%0a" +
-        "Gender : "
-        + gender +
-        "%0a" +
-        "%0a" +
-        "Date of Birth "
-        + dob +
-        "%0a" +
-        "%0a" +
-        "Name of Parent : "
-        + pname +
-        "%0a" +
-        "%0a" +
-        "Parents Contact Number : "
-        + pphone +
-
-        "%0a" +
-        "%0a" +
-        "Residential Address : "
-        + address +
-        "%0a" +
-        "%0a" +
-        "Class Studying : "
-        + std +
-        "%0a" +
-        "%0a" +
-        "School/College Studying : "
-        + scname +
-        "%0a" +
-        "%0a" +
-        "Subjects Needed : "
-        + subjects +
-        "%0a" +
-        "%0a" +
-        "Stream : "
-        + stream +
-        "%0a" +
-        "%0a" +
-        "Mode of Teaching : " +
-        mode +
-        "%0a" +
-        "%0a" +
-        "Board : "
-        + board +
-        "%0a" +
-        "%0a" +
-        "Reference : "
-        + ref;
-
-
-
-
-    window.open(url, "_blank").focus();
 }
 
+function whatsapp(){
+    validation();
+    if(validation == true){
+        gowhatsapp();
+    }
+}
 
+var swiper = new Swiper(".slide-content", {
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        520: {
+            slidesPerView: 2,
+        },
+        950: {
+            slidesPerView: 3,
+        },
+    },
+});
