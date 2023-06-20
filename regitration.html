@@ -214,22 +214,24 @@
                         
                         <div class="row register-form">
                             <div class="col-md-12">
-                                <form autocomplete="off">
+                                <form autocomplete="on" method="post" onsubmit="gowhatsapp()">
                                     <div class="form-group">
                                         <label for="name" class="labl"><strong>Name of Student *</strong></label><br>
                                         <input type="text" name="Name" id="name" class="form-control"
                                             placeholder="Enter Your Name *" value="" required style="width:18rem;height:25px;" autocomplete="name"  />
+                                            <br><span class="formerror"></span>
                                     </div><br>
                                     
                                     <div class="form-group">
                                         <label for="phone" class="labl"><strong>Student's Contact Number*</strong></label><br>
                                         <input type="number" name="Phone" id="phone" class="form-control"
                                             placeholder=" Contact Number *" value="" required style="width:18rem;height:25px;" autocomplete="number" />
+                                            <br><span class="formError"></span>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="email" class="labl"><strong>Email I'D*</strong></label><br>
                                         <input type="email" name="Email" id="email" class="form-control"
-                                            placeholder="Enter Your Email *" value="" required style="width:18rem;height:25px;" autocomplete="email" />
+                                            placeholder="Enter Your Email *" value="" required style="width:18rem;height:25px;" autocomplete="email" /> <br><span class="formError"></span>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="gender" class="labl"><strong>Gender *</strong></label><br>
@@ -244,16 +246,16 @@
                                     <div class="form-group">
                                         <label for="pname" class="labl"><strong>Name of Parent *</strong></label><br>
                                         <input type="text" name="Name" id="pname" class="form-control"
-                                            placeholder="Enter Parent Name *" value="" required style="width:18rem;height:25px;" />
+                                            placeholder="Enter Parent Name *" value="" required style="width:18rem;height:25px;" /> <br><span class="formError"></span>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="pphone" class="labl"><strong>Parent's Contact Number *</strong></label><br>
                                         <input type="number" name="Phone" id="pphone" class="form-control"
-                                            placeholder="Contact Number *" value="" required style="width:18rem;height:25px;"/>
+                                            placeholder="Contact Number *" value="" required style="width:18rem;height:25px;"/> <br><span class="formError"></span>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="address" class="labl" id="address"><strong>Enter your Residential Address *</strong></label><br>
-                                        <textarea name="address" id="address" cols="37.5" rows="3" placeholder="Enter your Current Address"  aria-required="true"></textarea>
+                                        <textarea name="address" id="address" cols="37.5" rows="3" placeholder="Enter your Current Address"  aria-required="true"></textarea> <br><span class="formError"></span>
                                     </div><br>
                                     <div class="form-group">
                                         <label for="std" class="labl"><strong>Enter Your Class Studying *</strong></label><br>
@@ -283,6 +285,7 @@
                                             <label for="scname" class="labl"><strong>School/College Name Your Studying *</strong></label><br>
                                             <input type="text" name="Name" id="scname" class="form-control"
                                                 placeholder="Enter School/College Name *" value="" required style="width:18rem;height:25px;"/>
+                                                <br><span class="formError"></span>
                                         </div><br>
                                         <div class="form-group">
                                             <label for="subjects" class="labl"><strong>Subject Required*</strong></label>
@@ -339,6 +342,7 @@
                                         <br>
                                         <div class="check">
                                         <input type="text" name="ref" id="ref" placeholder="Enter the way you came to know about us" style="width:18rem;height:25px;" required >
+                                        <br><span class="formError"></span>
                                         
                                         </div>
                                         <div class="form-group">
@@ -361,7 +365,7 @@
                                     </div>
                                    
                                     <div class="form-group">
-                                        <input type="submit" onclick="gowhatsapp()" name="submit"
+                                        <input type="submit"  name="submit"
                                             class="btnSubmit btn-block btn-primary" value="Submit" >
                                                </div>
                                 </form>

@@ -347,3 +347,6 @@ font-weight: bolder;
   display: flex;
   justify-content: center;
 }
+.formerror {
+  color: red;
+}
