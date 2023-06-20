@@ -1,11 +1,20 @@
-h1{
+@font-face {
+  font-family: 'Edo';
+  font-style: normal;
+  font-weight: normal;
+  src:  url('edo.woff') ;
+  }
+
+ nav h1 , footer h2{
+ 
+    font-family: 'Edo';
     font-size: 1.5rem;
     color: white;
     margin-left: 15px;
   }
 
   nav div .navbar-collapse {
-    margin-left: 20px;
+    position: relative;
   }
   
   .sticky-btn{
@@ -137,7 +146,44 @@ font-weight: bolder;
   align-items: center;
 }
 .heroes{
-  margin-top: 0px;
+  position:relative;
+  top: 10px;
+}
+@media (min-width:800px) and (max-width:850px) {
+  .hero-card{
+    margin-bottom: 50px;
+  }
+  
+}
+@media (min-width:850px) and (max-width:900px) {
+  .hero-card{
+    margin-bottom: 80px;
+  }
+  
+}
+@media (min-width:900px) and (max-width:1000px) {
+  .hero-card{
+    margin-bottom: 110px;
+  }
+  
+}
+@media (min-width:900px) and (max-width:990px) {
+  .hero-card{
+    margin-bottom: 180px;
+  }
+  
+}
+@media (min-width:990px) and (max-width:1170px) {
+  .hero-card{
+    margin-bottom: 230px;
+  }
+  
+}
+@media (min-width:1170px) and (max-width:1450px) {
+  .hero-card{
+    margin-bottom: 300px;
+  }
+  
 }
 
 
@@ -292,4 +338,12 @@ font-weight: bolder;
   color: white;
   font-weight: bolder;
   font-size:1.8rem;
+}
+.see-btn{
+  display: flex;
+  justify-content: center;
+}
+.right-left{
+  display: flex;
+  justify-content: center;
 }
