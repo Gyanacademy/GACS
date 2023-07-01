@@ -1,9 +1,11 @@
-@font-face {
+/* all fonts{ */
+  @font-face {
   font-family: 'Edo';
   font-style: normal;
   font-weight: normal;
   src:  url('edo.woff') ;
   }
+/* } */
 
  nav h1 , footer h2{
  
@@ -149,6 +151,12 @@ font-weight: bolder;
   position:relative;
   top: 10px;
 }
+@media (min-width:100px) and (max-width:550px) {
+  .hero-card{
+    margin-bottom: 30px;
+  }
+  
+}
 @media (min-width:800px) and (max-width:850px) {
   .hero-card{
     margin-bottom: 50px;
@@ -181,7 +189,7 @@ font-weight: bolder;
 }
 @media (min-width:1170px) and (max-width:1450px) {
   .hero-card{
-    margin-bottom: 300px;
+    margin-bottom: 350px;
   }
   
 }
