@@ -28,21 +28,19 @@ function gowhatsapp() {
     let ref = document.getElementById("ref").value;
 
 
-    var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    var markedCheckbox = document.querySelectorAll('#subjects>input[type="checkbox"]:checked');
     for (var checkbox of markedCheckbox) {
         var subjects = document.body.append(checkbox.value + ', ');
     }
-    let allsubjects = subjects;
+    
 
-    let url =
-        "https://wa.me/918088263376?text=" +
-        "Dear, Gyan Academy of Commerce & Science " + "%0a" +
+    let url = "https://wa.me/918088263376?text="+
         "Name of the student : " + "*" +
-        firstname + " " + lastname + "*"
+        firstname + " " + lastname + "*" +
         "%0a" +
         "%0a" +
-        "Students Contact Number: "
-        + phone +
+        "Students Contact Number: " + 
+        phone +
         "%0a" +
         "%0a" +
         "Gender : "
@@ -57,7 +55,7 @@ function gowhatsapp() {
         + pname +
         "%0a" +
         "%0a" +
-        "Name of Mothe : " + motherName +
+        "Name of Mother : " + motherName +
         "%0a" +
         "%0a" +
         "Parents Contact Number : "
@@ -77,7 +75,7 @@ function gowhatsapp() {
         "%0a" +
         "%0a" +
         "Subjects Needed : "
-        + allsubjects +
+        + subjects +
         "%0a" +
         "%0a" +
         "Stream : "
@@ -114,7 +112,7 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML="Submit";
+        document.getElementById("nextBtn").innerHTML=`<input type="submit" onsubmit="gowhatsapp() name="submit" id="submit"  >Submit`;
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
@@ -154,7 +152,7 @@ function validateForm() {
         // If a field is empty...
         if (y[i].value == "") {
             // add an "invalid" class to the field:
-            y[i].classList.add(" invalid");
+            y[i].className+=" invalid";
             // and set the current valid status to false
             valid = false;
         }
@@ -173,7 +171,7 @@ function fixStepIndicator(n) {
         x[i].classList = x[i].className.replace(" active", "");
     }
     //... and adds the "active" class on the current step:
-    x[n].classList.add(" active");
+    x[n].className+=" active";
 }
 //  sending form to google sheets
 function sendtoGsheets() {
