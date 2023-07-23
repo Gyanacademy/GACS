@@ -15,7 +15,7 @@ function gowhatsapp() {
     let email = document.getElementById("email").value;
     let pphone = document.getElementById("pphone").value;
     let houseBuildingno = document.getElementById("House-Building-no").value;
-    let Streetlocality = document.getElementById("Street-locality").value;
+    let StreetLocality = document.getElementById("Street-locality").value;
     let district = document.getElementById("district").value;
     let state = document.getElementById("state").value;
     let pinCode = document.getElementById("pin-code").value;
@@ -63,7 +63,7 @@ function gowhatsapp() {
         "%0a" +
         "%0a" +
         "Residential Address : "
-        + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
+        + houseBuildingno + "," + StreetLocality + ", " + district + ", " + state + ", " + pinCode +
         "%0a" +
         "%0a" +
         "Class Studying : "
