@@ -37,8 +37,6 @@ function gowhatsapp() {
     }
     return new Promise(resolve => {
 
-<<<<<<< HEAD
-
     let url = "https://wa.me/918088263376?text="+
         "Name of the student : " + "*" +
         firstname + " " + lastname + "*" +
