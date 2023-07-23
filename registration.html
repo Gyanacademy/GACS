@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C39GZ69BSR"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -142,7 +144,13 @@
         padding: 30px;
         width: 100%;
         min-width: 300px;
-        border-radius: 12%;
+        border-radius:30px;
+    }
+    @media 
+    (max-width:368px) {
+#regform{
+    min-width: 200px;
+}
     }
 
 
@@ -164,7 +172,7 @@
         display: none;
     }
 
-    button {
+    button,#submit {
         background-color: #7908fb;
         color: #fef8f8;
 
@@ -176,7 +184,7 @@
         cursor: pointer;
     }
 
-    button:hover {
+    button:hover,#sumit:hover {
         opacity: 0.8;
         background-color: #14f723;
         color: black;
@@ -248,7 +256,7 @@
 
                     <div class="row register-form">
                         <div class="col-md-12">
-                            <form autocomplete="on" method="POST"  onsubmit="gowhatsapp()" id="regForm"
+                            <form autocomplete="on" method="POST" onsubmit="gowhatsapp()" id="regForm"
                                 name="Student-Database">
 
                                 <!-- step-1 students details -->
@@ -258,14 +266,14 @@
 
                                     <label for="name" class="labl"><strong>First Name *</strong></label><br>
 
-                                    <input type="text" name="FirstName" id="firstName" class="form-control"
+                                    <input type="text" name="data[FirstName]" id="firstName" class="form-control"
                                         placeholder="Enter Your First Name *" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="given-name" />
                                     <br><span class="formerror"></span>
 
                                     <!--Student last name-->
                                     <label for="name" class="labl"><strong>Last Name *</strong></label><br>
-                                    <input type="text" name="LastName" id="lastname" class="form-control"
+                                <input type="text" name="data[LastName]" id="lastname" class="form-control"
                                         placeholder="Enter Your Middle or Last Name *" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="family-name" />
                                     <br><span class="formerror"></span>
@@ -274,7 +282,7 @@
                                     <label for="gender" class="labl"><strong>
                                             Gender
                                         </strong></label>
-                                    <select class="form-control" id="gender" name="Gender" for="gender" required
+                                    <select class="form-control" id="gender" name="data[Gender]" for="gender" required
                                         style="width:100%;height:2.5rem;" placeholder="Please Select Right option">
                                         <option selected disabled hidden>Select your option*</option>
                                         <option value="Male">Male</option>
@@ -285,7 +293,7 @@
                                     <br>
                                     <!-- dob -->
                                     <label for="dob" class="labl"><strong>Date Of Birth *</strong></label><br>
-                                    <input type="date" name="DOB" id="dob" value="" required
+                                    <input type="date" name="data[DOB]" id="dob" value="" required
                                         style="width:100%;height:2.5rem;border-radius: 6px;"
                                         placeholder="Set Your Date of Birth">
                                     <span class="formError"></span>
@@ -293,7 +301,7 @@
                                     <br>
                                     <!--mother tongue-->
                                     <label for="m-tongue" class="labl"><strong>Mother Tongue*</strong></label><br>
-                                    <input type="text" name="MotherTongue" id="m-tongue" value="" required
+                                    <input type="text" name="data[MotherTongue]" id="m-tongue" value="" required
                                         style="width:100%;height:2.5rem;border-radius: 6px;"
                                         placeholder="Enter your Mother Tongue">
                                     <span class="formError"></span>
@@ -304,20 +312,20 @@
                                     <h4 class="progress-head">Parents Details</h4>
                                     <!--father name-->
                                     <label for="pname" class="labl"><strong>Name of Father*</strong></label><br>
-                                    <input type="text" name="FatherName" id="pname" class="form-control"
+                                    <input type="text" name="data[FatherName]" id="pname" class="form-control"
                                         placeholder="Enter Parent Name *" value="" required
                                         style="width:100%;height:2.rem;" /> <br><span class="formError"></span>
                                     <!--father occupation -->
                                     <label for="occupation" class="labl"><strong>Occupation of
                                             Father*</strong></label><br>
                                     </strong></label>
-                                    <input type="text" name="FatherOccupation" id="occupation" class="form-control"
+                                    <input type="text" name="data[FatherOccupation]" id="occupation" class="form-control"
                                         placeholder="Enter Father's Occupation*" value="" required
                                         style="width:100%;height:2.5rem;" />
                                     <br><span class="formError"></span>
                                     <!--  mother name-->
                                     <label for="m-name" class="labl"><strong>Name of Mother*</strong></label><br>
-                                    <input type="text" name="MotherName" id="m-name" class="form-control"
+                                    <input type="text" name="data[MotherName]" id="m-name" class="form-control"
                                         placeholder="Enter Parent Name *" value="" required
                                         style="width:100%;height:2.rem;" /> <br><span class="formError"></span>
 
@@ -325,7 +333,7 @@
                                     <label for="m-occupation" class="labl"><strong>Occupation of
                                             Mother*</strong></label><br>
                                     </strong></label>
-                                    <input type="text" name="MotherOccupation" id="m-occupation" class="form-control"
+                                    <input type="text" name="data[MotherOccupation]" id="m-occupation" class="form-control"
                                         placeholder="Enter Mother's Occupation*" value="" required
                                         style="width:100%;height:2.5rem;" />
                                     <br><span class="formError"></span>
@@ -341,7 +349,7 @@
                                     <!-- students number -->
                                     <label for="phone" class="labl"><strong>Student's Contact
                                             Number*</strong></label><br>
-                                    <input type="number" name="StudentsContactNumber" id="phone" class="form-control"
+                                    <input type="number" name="data[StudentsContactNumber]" id="phone" class="form-control"
                                         placeholder=" Contact Number *" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="number" />
                                     <br><span class="formError"></span>
@@ -349,37 +357,37 @@
                                     <!-- parents contact number -->
                                     <label for="pphone" class="labl"><strong>Parent's Contact Number
                                             *</strong></label><br>
-                                    <input type="number" name="ParentsContactNumber" id="pphone" class="form-control"
+                                    <input type="number" name="data[ParentsContactNumber]" id="pphone" class="form-control"
                                         placeholder="Contact Number *" value="" required
                                         style="width:100%;height:2.5rem;" /> <br><span class="formError"></span>
 
                                     <!-- Email -->
                                     <label for="email" class="labl"><strong>Email I'D*</strong></label><br>
-                                    <input type="email" name="Email-I'd" id="email" class="form-control"
+                                    <input type="email" name="data[Email-I'd]" id="email" class="form-control"
                                         placeholder="Enter Your Email *" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="email" /> <br><span
                                         class="formError"></span>
                                     <!--adress-->
                                     <label for="address" class="labl" id="address" style="color:black;"><strong>Enter
                                             your Residential Address *</strong></label><br><br>
-                                    <label for="House-building-no" class="labl" id="address"><strong>Enter your
+                                    <label for="House-building-no" class="labl" id="address" style="font-family: edo;"><strong>Enter your
                                             House/Building Number
                                             *</strong></label><br>
-                                    <input type="text" name="House-Building-no" id="House-Building-no"
+                                    <input type="text" name="data[House-Building-no]" id="House-Building-no"
                                         class="form-control" placeholder="Enter Your House/Building Number *" value=""
                                         required style="width:100%;height:2.5rem;" /> <br><span
                                         class="formError"></span>
                                     <br><label for="street-locality" class="labl" id="address"><strong>Enter your
                                             Street/Loacality
                                             *</strong></label><br>
-                                    <input type="text" name="Street-locality" id="Street-locality" class="form-control"
+                                    <input type="text" name="data[Street-locality]" id="Street-locality" class="form-control"
                                         placeholder="Enter Your Street/Locality*" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="address-line1" /> <br><span
                                         class="formError"></span>
                                     <br>
                                     <label for="district" class="labl" id="address"><strong>Enter your District
                                             *</strong></label><br>
-                                    <input type="text" name="district" id="district" class="form-control"
+                                    <input type="text" name="data[district]" id="district" class="form-control"
                                         placeholder="Enter Your District*" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="street-address" /> <br><span
                                         class="formError"></span>
@@ -387,13 +395,13 @@
                                     <br>
                                     <label for="state" class="labl" id="address"><strong>Enter your
                                             State*</strong></label><br>
-                                    <input type="text" name="state" id="state" class="form-control"
+                                    <input type="text" name="data[state]" id="state" class="form-control"
                                         placeholder="Enter Your State*" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="state" /> <br><span
                                         class="formError"></span><br>
                                     <label for="pin-code" class="labl" id="address"><strong>Enter your Pincode
                                             *</strong></label><br>
-                                    <input type="number" name="pin-code" id="pin-code" class="form-control"
+                                    <input type="number" name="data[pin-code]" id="pin-code" class="form-control"
                                         placeholder="Enter Your Pin-code*" value="" required
                                         style="width:100%;height:2.5rem;" autocomplete="street-address" /> <br><span
                                         class="formError"></span>
@@ -407,7 +415,8 @@
                                     <!--class studying-->
                                     <label for="std" class="labl"><strong>Enter Your Class Studying
                                             *</strong></label><br>
-                                    <select class="form-control" id="std" required style="width:100%;height:2.5rem;">
+                                    <select class="form-control" id="std" required style="width:100%;height:2.5rem;"
+                                        name="data[class-Studying]">
                                         <option selected disabled>--Please choose an option--</option>
                                         <option value="8th">8th</option>
                                         <option value="9th">9th</option>
@@ -433,14 +442,14 @@
                                     <!-- school/college name-->
                                     <label for="scname" class="labl"><strong>School/College Name Your Studying
                                             *</strong></label><br>
-                                    <input type="text" name="Name" id="scname" class="form-control"
+                                    <input type="text" name="data[schoolName]" id="scname" class="form-control"
                                         placeholder="Enter School/College Name *" value="" required
                                         style="width:100%;height:2.5rem;" />
                                     <br><span class="formError"></span>
                                     <!--   board/University -->
-
+<br>
                                     <label for="board" class="labl" required><strong>Select Board *</strong></label><br>
-                                    <select name="board" id="board" required
+                                    <select name="data[board]" id="board" required
                                         style="width:100%;height:2.5rem;border-radius: 8px;"><br>
                                         <option selected disabled hidden>Select your option*</option>
                                         <option value="States Board">States Board</option>
@@ -456,10 +465,10 @@
 
 
                                     <span class="formError"></span>
-
+                                    <br><br>
                                     <label for="stream" class="labl" required><strong>Select Stream
                                             *</strong></label><br>
-                                    <select name="board" required style="width:100%;height:2.5rem;border-radius: 8px ;"
+                                    <select name="data[stream]" required style="width:100%;height:2.5rem;border-radius: 8px ;"
                                         id="stream"><br>
                                         <option selected disabled hidden>Select your option*</option>
                                         <option value="Commerce">Commerce</option>
@@ -469,7 +478,7 @@
                                     <span class="formError"></span>
                                 </div>
 
-
+                                <!-- step-5 students Preference -->
                                 <div class="form-group">
                                     <h4 class="progress-head">Student's Subject Preference Details</h4>
 
@@ -477,40 +486,36 @@
                                     <br>
                                     <div class="check">
 
-                                        <input type="checkbox" name="sub" id="subjects" value="Accountancy"
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Accountancy"
                                             aria-details="Accountancy">
                                         Accountancy<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Economics">
+                                        <input type="checkbox" name="datasub]" id="subjects" value="Economics">
 
                                         Economics<br>
-                                        <input type="checkbox" name="sub" id="subjects"
+                                        <input type="checkbox" name="data[sub]" id="subjects"
                                             value="Business Studies">Business Studies<br>
-                                        <input type="checkbox" name="sub" id="subjects"
+                                        <input type="checkbox" name="data[sub]" id="subjects"
                                             value="Computer Science">Computer Science<br>
-                                        <input type="checkbox" name="sub" id="subjects"
+                                        <input type="checkbox" name="data[sub]" id="subjects"
                                             value="Mathematics">Mathematics<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Science">Science<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="physics">Physics<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Chemistry">Chemistry<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Biology">Biology<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Hindi">Hindi<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Kannada">Kannada<br>
-                                        <input type="checkbox" name="sub" id="subjects"
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Science">Science<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="physics">Physics<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Chemistry">Chemistry<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Biology">Biology<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Hindi">Hindi<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Kannada">Kannada<br>
+                                        <input type="checkbox" name="data[sub]" id="subjects"
                                             value="Commercial Studies">Commercial Studies<br>
-                                        <input type="checkbox" name="sub" id="subjects"
+                                        <input type="checkbox" name="data[sub]" id="subjects"
                                             value="Commercial Application">Commercial
                                         Application<br>
-                                        <input type="checkbox" name="sub" id="subjects" value="Others">Others<br>
-                                        <textarea name="Others" id="subjects" cols="auto" rows="3rem"
-                                            placeholder="Enter if Subjects not Mentioned"
-                                            style="width:100%;height:3rem;border-radius:8px;"></textarea>
-
-
+                                        <input type="checkbox" name="data[sub]" id="subjects" value="Others">Others(For other subjects Please contact Administrator)
+                                        
                                     </div>
 
                                     <label for="mode" class="labl" required><strong>Select Mode of Teaching
                                             *</strong></label><br>
-                                    <select name="Mode-of-Teaching " id="mode" required
+                                    <select name="data[Mode-of-Teaching] " id="mode" required
                                         style="width: 100%;height: 2.5rem;border-radius:8px;">
                                         <option selected disabled hidden>Select Mode of Teaching</option><br>
                                         <option value="Online">Online</option>
@@ -519,7 +524,7 @@
 
 
                                 </div>
-
+                                <!-- step-6 conformation -->
                                 <div class="form-group">
                                     <h4 class="progress-head">Confirmation</h4>
 
@@ -527,16 +532,16 @@
                                             *</strong></label>
                                     <br>
 
-                                    <input type="text" name="ref" id="ref"
+                                    <input type="text" name="data[ref]" id="ref"
                                         placeholder="Enter the way you came to know about us"
                                         style="width:100%;height:2.5rem;border-radius:8px;" required>
                                     <br><span class="formError"></span>
                                     <br>
 
-                                    <input type="checkbox" name="policy" id="subjects" value="iAgree" required> I ,
+                                    <input type="checkbox" name="data[policy]" id="subjects" value="iAgree" required> I ,
                                     agree all privacy &
                                     policy and I have read it <a href="./privacy.html">Privacy and Policy</a><br><br>
-                                    <input type="checkbox" name="terms" id="t&c" value="iAgree" required> I , agree all
+                                    <input type="checkbox" name="data[terms]" id="t&c" value="iAgree" required> I , agree all
                                     Terms & Conditions
                                     and I have read it <a href="./terms.html">Terms and Conditions</a><br><br>
 
@@ -552,10 +557,12 @@
                                             style="border-radius:10px;">Previous</button>
                                         <button type="button" id="nextBtn" onclick="nextPrev(1)"
                                             style="border-radius:10px;">Next</button>
+
                                     </div>
                                 </div>
 
                                 <div style="text-align:center;margin-top:40px;">
+                                    <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
                                     <span class="step"></span>
