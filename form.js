@@ -1,24 +1,24 @@
 //jshint esversion:6
 
-async function gowhatsapp() {
-    var firstname = document.getElementById("firstName").value;
-    var lastname = document.getElementById("lastname").value;
-    var gender = document.getElementById("gender").value;
-    var dob = document.getElementById("dob").value;
-    var motherTongue = document.getElementById("m-tongue").value;
-    var pname = document.getElementById("pname").value;
-    var fatherOccupation = document.getElementById("occupation").value;
-    var motherName = document.getElementById("m-name").value;
-    var motherOccupation = document.getElementById("m-occupation").value;
-    var phone = document.getElementById("phone").value;
-    var parentsPhone = document.getElementById("pphone").value;
-    var email = document.getElementById("email").value;
-    var pphone = document.getElementById("pphone").value;
-    var houseBuildingno = document.getElementById("House-Building-no").value;
-    var StreetLocality = document.getElementById("Street-locality").value;
-    var district = document.getElementById("district").value;
-    var state = document.getElementById("state").value;
-    var pinCode = document.getElementById("pin-code").value;
+function gowhatsapp() {
+    let firstname = document.getElementById("firstName").value;
+    let lastname = document.getElementById("lastname").value;
+    let gender = document.getElementById("gender").value;
+    let dob = document.getElementById("dob").value;
+    let motherTongue = document.getElementById("m-tongue").value;
+    let pname = document.getElementById("pname").value;
+    let fatherOccupation = document.getElementById("occupation").value;
+    let motherName = document.getElementById("m-name").value;
+    let motherOccupation = document.getElementById("m-occupation").value;
+    let phone = document.getElementById("phone").value;
+    let parentsPhone = document.getElementById("pphone").value;
+    let email = document.getElementById("email").value;
+    let pphone = document.getElementById("pphone").value;
+    let houseBuildingno = document.getElementById("House-Building-no").value;
+    let Streetlocality = document.getElementById("Street-locality").value;
+    let district = document.getElementById("district").value;
+    let state = document.getElementById("state").value;
+    let pinCode = document.getElementById("pin-code").value;
     var std = document.getElementById("std").value;
     var scname = document.getElementById("scname").value;
 
@@ -37,61 +37,62 @@ async function gowhatsapp() {
     }
     return new Promise(resolve => {
 
+<<<<<<< HEAD
 
-        var url = "https://wa.me/918088263376?text=" +
-            "Name of the student : " + "*" +
-            firstname + " " + lastname + "*" +
-            "%0a" +
-            "%0a" +
-            "Students Contact Number: " +
-            phone +
-            "%0a" +
-            "%0a" +
-            "Gender : "
-            + gender +
-            "%0a" +
-            "%0a" +
-            "Date of Birth: "
-            + dob +
-            "%0a" +
-            "%0a" +
-            "Name of Father : "
-            + pname +
-            "%0a" +
-            "%0a" +
-            "Name of Mother : " + motherName +
-            "%0a" +
-            "%0a" +
-            "Parents Contact Number : "
-            + pphone +
-            "%0a" +
-            "%0a" +
-            "Residential Address : "
-            + houseBuildingno + "," + StreetLocality + ", " + district + ", " + state + ", " + pinCode +
-            "%0a" +
-            "%0a" +
-            "Class Studying : "
-            + std +
-            "%0a" +
-            "%0a" +
-            "School/College Studying : " + "*"
-            + scname + "*" +
-            "%0a" +
-            "%0a" +
-            "Subjects Needed : "
-            + subjects +
-            "%0a" +
-            "%0a" +
-            "Stream : "
-            + stream +
-            "%0a" +
-            "%0a" +
-            "Mode of Teaching : " + "*" +
-            mode + "*" +
-            "%0a" +
-            "%0a" +
-            "Board : "
-            + board;
+    let url = "https://wa.me/918088263376?text="+
+        "Name of the student : " + "*" +
+        firstname + " " + lastname + "*" +
+        "%0a" +
+        "%0a" +
+        "Students Contact Number: " + 
+        phone +
+        "%0a" +
+        "%0a" +
+        "Gender : "
+        + gender +
+        "%0a" +
+        "%0a" +
+        "Date of Birth: "
+        + dob +
+        "%0a" +
+        "%0a" +
+        "Name of Father : "
+        + pname +
+        "%0a" +
+        "%0a" +
+        "Name of Mother : " + motherName +
+        "%0a" +
+        "%0a" +
+        "Parents Contact Number : "
+        + pphone +
+        "%0a" +
+        "%0a" +
+        "Residential Address : "
+        + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
+        "%0a" +
+        "%0a" +
+        "Class Studying : "
+        + std +
+        "%0a" +
+        "%0a" +
+        "School/College Studying : " + "*"
+        + scname + "*" +
+        "%0a" +
+        "%0a" +
+        "Subjects Needed : "
+        + subjects +
+        "%0a" +
+        "%0a" +
+        "Stream : "
+        + stream +
+        "%0a" +
+        "%0a" +
+        "Mode of Teaching : " + "*" +
+        mode + "*" +
+        "%0a" +
+        "%0a" +
+        "Board : "
+        + board;
 
 
 
