@@ -1,5 +1,12 @@
 //jshint esversion:6
-
+function gotowhatsapp() {
+    let query = document.getElementById("newsletter1").value;
+    let url =
+        "https://wa.me/918088263376?text=" +
+        "Hi Gyan Academy , I have query about... :- "
+        + query;
+    window.open(url, "_blank").focus();
+}
 function gowhatsapp() {
     let firstname = document.getElementById("firstName").value;
     let lastname = document.getElementById("lastname").value;
