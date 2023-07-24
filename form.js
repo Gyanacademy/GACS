@@ -190,7 +190,7 @@ async function sendtoGsheets() {
     return new Promise(resolve => {
 
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx4rPzR2Sm4UHGWfguNA2j27rdD92exv6S9tFKBCsCH6bLr-oWnPXcFBPmIT18iNCC6fw/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyNg38Y-ko7UBTLq4gXvGpp9mBH9SUBxZVRARwuXtnVRC41cSveybvvHuouKSBkfIEHTg/exec'
         const form = document.getElementById('regForm');
 
         form.addEventListener('submit', e => {
@@ -198,8 +198,7 @@ async function sendtoGsheets() {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => response.json()
-                )
+                }).then(response => response.json())
                 .then((html)=>
                 {
                     window.location.href ="";
