@@ -1,5 +1,12 @@
 //jshint esversion:6
-
+function gotowhatsapp() {
+    let query = document.getElementById("newsletter1").value;
+    let url =
+        "https://wa.me/918088263376?text=" +
+        "Hi Gyan Academy , I have query about... :- "
+        + query;
+    window.open(url, "_blank").focus();
+}
 function gowhatsapp() {
     let firstname = document.getElementById("firstName").value;
     let lastname = document.getElementById("lastname").value;
@@ -36,8 +43,6 @@ function gowhatsapp() {
         }
     }
     return new Promise(resolve => {
-
-<<<<<<< HEAD
 
     let url = "https://wa.me/918088263376?text="+
         "Name of the student : " + "*" +
@@ -185,7 +190,7 @@ async function sendtoGsheets() {
     return new Promise(resolve => {
 
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx4rPzR2Sm4UHGWfguNA2j27rdD92exv6S9tFKBCsCH6bLr-oWnPXcFBPmIT18iNCC6fw/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyNg38Y-ko7UBTLq4gXvGpp9mBH9SUBxZVRARwuXtnVRC41cSveybvvHuouKSBkfIEHTg/exec'
         const form = document.getElementById('regForm');
 
         form.addEventListener('submit', e => {
@@ -193,8 +198,7 @@ async function sendtoGsheets() {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => response.json()
-                )
+                }).then(response => response.json())
                 .then((html)=>
                 {
                     window.location.href ="";

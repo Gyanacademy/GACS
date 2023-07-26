@@ -7,15 +7,6 @@ function gotowhatsapp() {
     window.open(url, "_blank").focus();
 }
 
-// document.querySelector(".cet").click(function(){
-//      window.location = "www.http://cetonline.karnataka.gov.in/kea/"; 
-//     });
-
-//  function show (){
-
-// document.classList.remove("remove").style.display = "block";
-// }
-
 
 
 
