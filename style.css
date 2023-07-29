@@ -621,24 +621,28 @@ figcaption{
   padding: 2em;
   grid-template-columns:repeat(4,1fr) ;
 }
-@media (min-width:1000px) {
+@media (max-width:1350px) {
   .service-grid{
-    grid-template-columns: repeat(3,2fr);
+    gap: 1.8rem;
+    padding: 1.8rem;
+    
+  grid-template-columns:repeat(2,1fr) ;
   }
   
 }
-@media (min-width:630px) {
+@media (max-width:710px) {
   .services{
     padding: 15px;
+    gap: 1rem;
   }
   .service-grid{
-    padding: 1.1rem;
+    padding: 1rem;
     gap: 1rem;
     grid-template-columns: repeat(2,2fr);
   }
   
 }
-@media (min-width:300px) {
+@media (max-width:640px) {
   .services{
     padding: 15px;
   }

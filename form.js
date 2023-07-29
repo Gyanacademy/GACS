@@ -34,7 +34,7 @@ function gowhatsapp() {
     var board = document.getElementById("board").value;
     var ref = document.getElementById("ref").valuvar
 
-    var markedCheckbox = document.getElementsByName('data[sub]');
+    var markedCheckbox = document.getElementsByName('sub');
     var subjects = " ";
     for (var i = 0; i < markedCheckbox.length; i++) {
         if (markedCheckbox[i].checked) {
