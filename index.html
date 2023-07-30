@@ -593,16 +593,16 @@
         <p>&nbsp;</p>
         <label for="message" style="font-size: 1.5rem;color: white;">Your Message</label><br>
         <textarea name="message" id="message" cols="100%" rows="4rem" placeholder="Write your message..." style="width: 100%;border-radius:8px;"></textarea><br><br>
-     <input type="submit" value="SEND" class="btn btn-primary" style="width: 100%;font-size: 1.2em;" onsubmit="contactus()">
+     <input type="submit" value="SEND" class="btn btn-primary" style="width: 100%;font-size: 1.2em;" onsubmit="contactUs()">
 
     </form>
   </div>
   <script>
-    function contactus(){
+    function contactUs(){
       let cName = document.getElementById('name').value;
       let cemail = document.getElementById('email').value;
       let cmessage = document.getElementById('message').value;
-      let url = "https://wa.me/918088263376?text=" + 
+      let mess = "https://wa.me/918088263376?text=" + 
       "Hi Gyan Academy , I have Query About" +
       "%0a"+
       "Name :" + cName +
@@ -610,7 +610,7 @@
       "Eamil Id:" + cemail+
       "%0a"+
       "My Message :"+ cmessage ;
-      window.open(url ,"_blank").focus();
+      window.open(mess ,"_blank").focus();
     }
   </script>
   </section>
