@@ -653,3 +653,24 @@ figcaption{
   }
   
 }
+
+
+.home-icon{
+  position: absolute;
+  left: 6%;
+  top: 21%;
+}
+.home-text{
+  position: absolute;
+  left: 9%;
+  top:28% ;
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+/* .home-border{
+  background-color: black;
+  width: 2px;
+  position: absolute;
+  left: 20%;
+  height: 100%;
+} */
