@@ -816,9 +816,9 @@ function fixStepIndicator(n) {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => alert('Successfully Registered'))
+                }).then(response => console.log('Successfully Registered'))
                 .catch(error => console.error('Error!',error.message))
-            sendEmail();
+            sendEmail(); 
         });
 }
  function sendEmail() {
@@ -900,7 +900,7 @@ function fixStepIndicator(n) {
             Subject: "New Student has Registered  " + firstname + " " + lastname,
             Body: sendtoEmail,
         }).then(
-            message => console.log(message)
+            message => alert(message)
         );
 }
 
