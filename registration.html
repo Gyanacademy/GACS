@@ -255,7 +255,7 @@
 
                     <div class="row register-form">
                         <div class="col-md-12">
-                            <form autocomplete="off" method="post" onsubmit="submitAllFunction()" id="regForm"
+                            <form autocomplete="off" method="post" onsubmit="sendtoGsheets()" id="regForm"
                                 name="submit-to-google-sheets" action="javascript:alert('Click Ok!To Submit')">
 
                                 <!-- step-1 students details -->
@@ -816,7 +816,7 @@ function fixStepIndicator(n) {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => response)
+                }).then(response => alert('Successfully Registered')
                 .catch(error => console.error('Error!',error.message))
             sendEmail();
         });
