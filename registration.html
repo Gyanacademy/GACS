@@ -255,8 +255,8 @@
 
                     <div class="row register-form">
                         <div class="col-md-12">
-                            <form autocomplete="off" method="post" onsubmit="submitAllFunction()" id="regForm"
-                                name="submit-to-google-sheets" action="./thanks.html">
+                            <form autocomplete="off" method="POST"  id="regForm"
+                                name="submit-to-google-sheets" action="javascript:console.log('Ok')">
 
                                 <!-- step-1 students details -->
                                 <div class="form-group">
@@ -544,13 +544,11 @@
                                     Terms & Conditions
                                     and I have read it <a href="./terms.html">Terms and Conditions</a><br><br>
 
-                                    <label for="submit" class="labl"> <strong>Note: </strong> * After Clicking on Submit
-                                        You will be
-                                        Redirected to Whatsapp to send the form Details *</label><br>
-
+                                    
                                 </div>
                                 <!-- buttons -->
                                 <div style="overflow:auto;margin-top: 50px;">
+                                    <h1 class="hidden" style="display: none;">Click Submit to Register</h1>
                                     <div style="float:right;">
                                         <button type="button" id="prevBtn" onclick="nextPrev(-1)"
                                             style="border-radius:10px;">Previous</button>
@@ -736,7 +734,8 @@ function showTab(n) {
     if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = 'Submit';
         document.getElementById("nextBtn").setAttribute('type', 'submit');
-        document.getElementById("nextBtn").setAttribute('onsubmit', 'submitAllFunction()');
+        document.getElementById("nextBtn").setAttribute('onsubmit', 'sendtoGsheets()');
+        document.getElementsByClassName("hidden").style.display = "block";
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
@@ -755,10 +754,11 @@ function nextPrev(n) {
     // Increase or decrease the current tab by 1:
     currentTab = currentTab + n;
     // if you have reached the end of the form...
-    if (currentTab >= x.length) {
+    if (currentTab == x.length) {
         // ... the form gets submitted:
+        document.getElementsByClassName("hidden").style.display = "block";
         document.getElementById("regForm").submit();
-        return false;
+        return true;
     }
 
     // Otherwise, display the correct tab:
@@ -816,9 +816,10 @@ function fixStepIndicator(n) {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => response)
+                }).then(response => ('Registered Successfully!'))
                 .catch(error => console.error('Error!',error.message))
         });
+        // sendEmail();
 }
  function sendEmail() {
     let firstname = document.getElementById("firstName").value;
@@ -899,17 +900,19 @@ function fixStepIndicator(n) {
             Subject: "New Student has Registered  " + firstname + " " + lastname,
             Body: sendtoEmail,
         }).then(
-            message => alert(message)
+            message => alert('Registered Successfully')
+        ).catch(
+            error => console.error('Error',error.message)
         );
 }
 
 
- function submitAllFunction() {
+//  function submitAllFunction() {
 
-     sendEmail();
-     sendtoGsheets();
-    //  gowhatsapp();
-}
+//      sendEmail();
+//      sendtoGsheets();
+//     //  gowhatsapp();
+// }
   
         </script>
     <!-- <script src="./form.js"></script> -->
