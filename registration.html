@@ -546,6 +546,9 @@
 
                                     
                                 </div>
+                                <div class="form-group">
+
+                                </div>
                                 <!-- buttons -->
                                 <div style="overflow:auto;margin-top: 50px;">
                                     <h1 class="hidden" style="display: none;">Click Submit to Register</h1>
@@ -735,7 +738,7 @@ function showTab(n) {
         document.getElementById("nextBtn").innerHTML = 'Submit';
         document.getElementById("nextBtn").setAttribute('type', 'submit');
         document.getElementById("nextBtn").setAttribute('onsubmit', 'sendtoGsheets()');
-        document.getElementsByClassName("hidden").style.display = "block";
+        // document.getElementsByClassName("hidden").style.display = "block";
     } else {
         document.getElementById("nextBtn").innerHTML = "Next";
     }
@@ -756,7 +759,7 @@ function nextPrev(n) {
     // if you have reached the end of the form...
     if (currentTab == x.length) {
         // ... the form gets submitted:
-        document.getElementsByClassName("hidden").style.display = "block";
+        // document.getElementsByClassName("hidden").style.display = "block";
         document.getElementById("regForm").submit();
         return true;
     }
