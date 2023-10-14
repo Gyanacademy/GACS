@@ -256,7 +256,7 @@
                     <div class="row register-form">
                         <div class="col-md-12">
                             <form autocomplete="off" method="POST"  id="regForm"
-                                name="submit-to-google-sheets" action="javascript:console.log('Ok')">
+                                name="submit-to-google-sheets" action="javascript:sendtoGsheets()">
 
                                 <!-- step-1 students details -->
                                 <div class="form-group">
@@ -819,10 +819,10 @@ function fixStepIndicator(n) {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => ('Registered Successfully!'))
+                }).then(response => console.log('Registered Successfully!'))
                 .catch(error => console.error('Error!',error.message))
         });
-        // sendEmail();
+        sendEmail();
 }
  function sendEmail() {
     let firstname = document.getElementById("firstName").value;
@@ -910,13 +910,6 @@ function fixStepIndicator(n) {
 }
 
 
-//  function submitAllFunction() {
-
-//      sendEmail();
-//      sendtoGsheets();
-//     //  gowhatsapp();
-// }
-  
         </script>
     <!-- <script src="./form.js"></script> -->
 </body>
