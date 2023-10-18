@@ -1,0 +1,58 @@
+<style>
+    body {
+      font-family: sans-serif;
+    }
+
+    #scroll-to-top-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #scroll-to-top-button:hover {
+      opacity: 1;
+    }
+
+    #scroll-to-top-button.active {
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      color: #fff;
+      z-index: 999;
+    }
+  </style>
+
+
+  <div id="scroll-to-top-button"></div>
+
+  <script>
+    const scrollToTopButton = document.getElementById('scroll-to-top-button');
+
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        scrollToTopButton.style.opacity = 1;
+      } else {
+        scrollToTopButton.style.opacity = 0;
+      }
+    });
+
+    scrollToTopButton.addEventListener('click', function() {
+      scrollToTopButton.classList.add('active');
+
+      setTimeout(function() {
+        scrollToTopButton.classList.remove('active');
+      }, 500);
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
