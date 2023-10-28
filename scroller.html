@@ -1,58 +1,58 @@
 <style>
-    body {
-      font-family: sans-serif;
+  body {
+    font-family: sans-serif;
+  }
+
+  #scroll-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+  }
+
+  #scroll-to-top-button.active {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    z-index: 1999;
+  }
+</style>
+
+
+<div id="scroll-to-top-button" onclick="topFunction()"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor"
+    class="bi bi-arrow-up-circle" viewBox="0 0 16 16" style="filter:invert(100)">
+    <path fill-rule="evenodd"
+      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+  </svg></div>
+
+<script>
+  // Get the button
+  let mybutton = document.getElementById("scroll-to-top-button");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () { 
+    scrollFunction()
+   };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
     }
+  }
 
-    #scroll-to-top-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #ccc;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
 
-    #scroll-to-top-button:hover {
-      opacity: 1;
-    }
-
-    #scroll-to-top-button.active {
-      width: 100%;
-      height: 100%;
-      background-color: #000;
-      color: #fff;
-      z-index: 999;
-    }
-  </style>
-
-
-  <div id="scroll-to-top-button"></div>
-
-  <script>
-    const scrollToTopButton = document.getElementById('scroll-to-top-button');
-
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        scrollToTopButton.style.opacity = 1;
-      } else {
-        scrollToTopButton.style.opacity = 0;
-      }
-    });
-
-    scrollToTopButton.addEventListener('click', function() {
-      scrollToTopButton.classList.add('active');
-
-      setTimeout(function() {
-        scrollToTopButton.classList.remove('active');
-      }, 500);
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-  </script>
