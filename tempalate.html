@@ -37,49 +37,284 @@
 
 <body>
 
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="..." class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+<form id="registration-form" method="POST">
+  <fieldset id="step-1">
+    <legend>Step 1: Personal Information</legend>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    <button type="button" id="next-1">Next</button>
+  </fieldset>
+  <fieldset id="step-2">
+    <legend>Step 2: Course Information</legend>
+    <label for="course">Course:</label>
+    <input type="text" id="course" name="course" required>
+    <label for="start-date">Start Date:</label>
+    <input type="date" id="start-date" name="start-date" required>
+    <label for="end-date">End Date:</label>
+    <input type="date" id="end-date" name="end-date" required>
+    <button type="button" id="previous-2">Previous</button>
+    <button type="button" id="next-2">Next</button>
+  </fieldset>
+  <fieldset id="step-3">
+    <legend>Step 3: Payment Information</legend>
+    <label for="card-number">Card Number:</label>
+    <input type="text" id="card-number" name="card-number" required pattern="[0-9]{16}">
+    <label for="expiration-date">Expiration Date:</label>
+    <input type="month" id="expiration-date" name="expiration-date" required>
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required pattern="[0-9]{3}">
+    <button type="button" id="previous-3">Previous</button>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-  <script src="./index.js"></script>
-</body>
+<script>
+  const form = document.getElementById('registration-form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
+  const courseInput = document.getElementById('course');
+  const startDateInput = document.getElementById('start-date');
+  const endDateInput = document.getElementById('end-date');
+  const cardNumberInput = document.getElementById('card-number');
+  const expirationDateInput = document.getElementById('expiration-date');
+  const cvvInput = document.getElementById('cvv');
 
-</html>
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (validateForm()) {
+      form.submit();
+    }
+  });
+
+  function validateForm() {
+    let isValid = true;
+
+    if (nameInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(nameInput, 'Name cannot be blank');
+    } else {
+      setSuccessFor(nameInput);
+    }
+
+    if (emailInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(emailInput, 'Email cannot be blank');
+    } else if (!isEmail(emailInput.value.trim())) {
+      isValid = false;
+      setErrorFor(emailInput, 'Email is not valid');
+    } else {
+      setSuccessFor(emailInput);
+    }
+
+    if (phoneInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(phoneInput, 'Phone number cannot be blank');
+    } else if (!isPhone(phoneInput.value.trim())) {
+      isValid = false;
+      setErrorFor(phoneInput, 'Phone number is not valid');
+    } else {
+      setSuccessFor(phoneInput);
+    }
+
+    if (courseInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(courseInput, 'Course cannot be blank');
+    } else {
+      setSuccessFor(courseInput);
+    }
+
+    if (startDateInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(startDateInput, 'Start date cannot be blank');
+    } else {
+      setSuccessFor(startDateInput);
+    }
+
+    if (endDateInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(endDateInput, 'End date cannot be blank');
+    } else {
+      setSuccessFor(endDateInput);
+    }
+
+    if (cardNumberInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(cardNumberInput, 'Card number cannot be blank');
+    } else if (!isCardNumber(cardNumberInput.value.trim())) {
+      isValid = false;
+      setErrorFor(cardNumberInput, 'Card number is not valid');
+    } else {
+      setSuccessFor(cardNumberInput);
+    }
+
+    if (expirationDateInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(expirationDateInput, 'Expiration date cannot be blank');
+    } else {
+      setSuccessFor(expirationDateInput);
+    }
+
+    if (cvvInput.value.trim() === '') {
+      isValid = false;
+      setErrorFor(cvvInput, 'CVV cannot be blank');
+    } else if (!isCVV(cvvInput.value.trim())) {
+      isValid = false;
+      setErrorFor(cvvInput, 'CVV is not valid');
+    } else {
+      setSuccessFor(cvvInput);
+    }
+
+    return isValid;
+  }
+
+  function setErrorFor(input, message) {
+    const formGroup = input.parentElement;
+    const errorMessage = formGroup.querySelector('.error-message');
+    errorMessage.innerText = message;
+    formGroup.classList.add('error');
+  }
+
+  function setSuccessFor(input) {
+    const formGroup = input.parentElement;
+    const errorMessage = formGroup.querySelector('.error-message');
+    errorMessage.innerText = '';
+    formGroup.classList.remove('error');
+  }
+
+  function isEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function isPhone(phone) {
+    return /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/.test(phone);
+  }
+
+  function isCardNumber(cardNumber) {
+    return /^[0-9]{16}$/.test(cardNumber);
+  }
+
+  function isCVV(cvv) {
+    return /^[0-9]{3}$/.test(cvv);
+  }
+</script>
 
 
-<!-- 
-
-
-https://script.google.com/macros/s/AKfycbx4rPzR2Sm4UHGWfguNA2j27rdD92exv6S9tFKBCsCH6bLr-oWnPXcFBPmIT18iNCC6fw/exec
 
 
 
-AKfycbx4rPzR2Sm4UHGWfguNA2j27rdD92exv6S9tFKBCsCH6bLr-oWnPXcFBPmIT18iNCC6fw
 
- -->
+
+
+
+
+
+
+
+
+
+
+function gowhatsapp() {
+  let firstname = document.getElementById("firstName").value;
+  let lastname = document.getElementById("lastname").value;
+  let gender = document.getElementById("gender").value;
+  let dob = document.getElementById("dob").value;
+  let motherTongue = document.getElementById("m-tongue").value;
+  let pname = document.getElementById("pname").value;
+  let fatherOccupation = document.getElementById("occupation").value;
+  let motherName = document.getElementById("m-name").value;
+  let motherOccupation = document.getElementById("m-occupation").value;
+  let phone = document.getElementById("phone").value;
+  let parentsPhone = document.getElementById("pphone").value;
+  let email = document.getElementById("email").value;
+  let pphone = document.getElementById("pphone").value;
+  let houseBuildingno = document.getElementById("House-Building-no").value;
+  let Streetlocality = document.getElementById("Street-locality").value;
+  let district = document.getElementById("district").value;
+  let state = document.getElementById("state").value;
+  let pinCode = document.getElementById("pin-code").value;
+  var std = document.getElementById("std").value;
+  var scname = document.getElementById("scname").value;
+
+  var stream = document.getElementById("stream").value;
+  var mode = document.getElementById("mode").value;
+  var board = document.getElementById("board").value;
+  var ref = document.getElementById("ref").value;
+
+  var markedCheckbox = document.getElementsByName('sub');
+  var subjects = " ";
+  for (var i = 0; i < markedCheckbox.length; i++) {
+      if (markedCheckbox[i].checked) {
+          subjects += markedCheckbox[i].value + " ; ";
+
+      }
+  }
+
+  let url = "https://wa.me/918088263376?text="+
+  "Name of the student : " + "*" +
+      firstname + " " + lastname + "*" +
+      "%0a" +
+      "%0a" +
+      "Students Contact Number: " + 
+      phone +
+      "%0a" +
+      "%0a" +
+      "Gender : "
+      + gender +
+      "%0a" +
+      "%0a" +
+      "Date of Birth: "
+      + dob +
+      "%0a" +
+      "%0a" +
+      "Name of Father : "
+      + pname +
+      "%0a" +
+      "%0a" +
+      "Name of Mother : " + motherName +
+      "%0a" +
+      "%0a" +
+      "Parents Contact Number : "
+      + pphone +
+      "%0a" +
+      "%0a" +
+      "Email-ID : "
+      + email +
+      "%0a" +
+      "%0a" +
+      "Residential Address : "
+      + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
+      "%0a" +
+      "%0a" +
+      "Class Studying : "
+      + std +
+      "%0a" +
+      "%0a" +
+      "School/College Studying : " + "*"
+      + scname + "*" +
+      "%0a" +
+      "%0a" +
+      "Subjects Needed : "
+      + subjects +
+      "%0a" +
+      "%0a" +
+      "Stream : "
+      + stream +
+      "%0a" +
+      "%0a" +
+      "Mode of Teaching : " + "*" +
+      mode + "*" +
+      "%0a" +
+      "%0a" +
+      "Board : "
+      + board+"%0a"+"%0a"+
+      "Reference :"+ ref;
+
+
+
+      window.open(url, "_blank").focus();
+}
