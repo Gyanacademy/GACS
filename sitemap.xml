@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
+<!-- //All Pages sitemaps -->
 <url>
   <loc>https://gyanacademy.github.io/GACS/</loc>
   <lastmod>2023-10-28T15:50:30+00:00</lastmod>
@@ -88,5 +88,46 @@
   <priority>0.51</priority>
 </url>
 
+<!-- All Images sitemaps -->
 
+<url>
+  <loc>https://gyanacademy.github.io/1stCareer.webp</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/1684860389440.webp</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/ajay.jpeg</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/class 10.png</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/class-9.webp</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/class8.png</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/class11.png</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://gyanacademy.github.io/class12.png</loc>
+  <lastmod>2023-10-28T15:50:30+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
 </urlset>
