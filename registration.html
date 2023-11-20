@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="refresh" content="7; url='https://www.gyanacademy.github.io/GACS" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="f5AtttUIkn-Zl6y8JYASMprBIsdYXn807ZBjbcRgS-Y" />
-    <meta http-equiv="Content-Type" content="text/html; " />
     <meta name="description"
         content="Welcome to Gyan Acadmey of Commerce & Science , We Welcome Students to the Workd of Knowledge" />
     <meta name="keywords"
@@ -256,7 +257,7 @@
                     <div class="row register-form">
                         <div class="col-md-12">
                             <form autocomplete="off" method="POST"  id="regForm"
-                                name="submit-to-google-sheets" action="javascript:sendtoGsheets()">
+                                name="submit-to-google-sheets" action="https://gyanacademy.github.io/GACS">
 
                                 <!-- step-1 students details -->
                                 <div class="form-group">
@@ -720,10 +721,11 @@ function fixStepIndicator(n) {
             fetch(scriptURL, { 
                 method: 'POST',
                  body: new FormData(form) ,
-                }).then(response => console.log('Registered Successfully!'))
-                .catch(error => console.error('Error!',error.message))
+                }).then(response => console.log('Registered Successfully!'),
+                sendEmail())
+                .catch(error => alert('Error!',error.message))
         });
-        sendEmail();
+       
 }
  function sendEmail() {
     let firstname = document.getElementById("firstName").value;
@@ -804,7 +806,8 @@ function fixStepIndicator(n) {
             Subject: "New Student has Registered  " + firstname + " " + lastname,
             Body: sendtoEmail,
         }).then(
-            message => alert('Click Submit only once again ! To Confirm the submission')
+            message => alert('Click Submit only once again ! To Confirm the submission'),
+            window.location.href="http://www.gyanacademy.github.io/GACS"
         ).catch(
             error => console.error('Error',error.message)
         );
