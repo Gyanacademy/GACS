@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://gyanacademy.github.io/GACS" />
   <meta property="og:url" content="https://gyanacademy.github.io/GACS">
   <meta property="og:image" content="./1684860389440.webp>
-  <meta property="og:description"
+  <meta property=" og:description"
     content="Welcome to Gyan Acadmey of Commerce & Science , We Welcome Students to the Workd of Knowledge">
   <meta property="og:title" content="Gyan Academy">
   <meta property="og:site_name" content="Gyan Acdemy">
@@ -28,8 +28,8 @@
   <meta name="twitter:image" content="./1684860389440.webp">
   <meta name="robots" content="index, follow">
 
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
-  
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
+
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io(1)/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io(1)/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io(1)/favicon-16x16.png">
@@ -665,17 +665,17 @@
 
 
 
-      <ul class="list-unstyled d-flex" style="margin: 20px;">
-        <li class="ms-4"><a class="link-body-emphasis" onclick="gotowhatsapp()"
-            href="https://wa.me/918088263376?text=Hi%20There!"><img src="./whatsapp.svg" alt="Whatsapp SVG"
-              style="height: 1.8rem;color: white;"></a></li>
-        <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/gyan_academy_cs/"><img
-              src="./instagram.svg" alt="Instagram SVG" style="height: 1.8rem;color: white;"></a>
-        </li>
-        <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/gyanacademyacs" target="_blank">
-            <img src="./facebook.svg" alt="Facebook SVG" style="height: 1.8rem;color: white;"></a>
-        </li>
-      </ul>
+    <ul class="list-unstyled d-flex" style="margin: 20px;">
+      <li class="ms-4"><a class="link-body-emphasis" onclick="gotowhatsapp()"
+          href="https://wa.me/918088263376?text=Hi%20There!"><img src="./whatsapp.svg" alt="Whatsapp SVG"
+            style="height: 1.8rem;color: white;"></a></li>
+      <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/gyan_academy_cs/"><img
+            src="./instagram.svg" alt="Instagram SVG" style="height: 1.8rem;color: white;"></a>
+      </li>
+      <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/gyanacademyacs" target="_blank">
+          <img src="./facebook.svg" alt="Facebook SVG" style="height: 1.8rem;color: white;"></a>
+      </li>
+    </ul>
   </div>
   <br><br><br>
   <!-- map -->
@@ -689,38 +689,36 @@
     </div>
   </div>
   <style>
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
+    .time {
+      align-items: center;
+      margin-bottom: 10px;
+    }
 
-        .title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .time {
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .closed {
-            color: red;
-        }
+    .closed {
+      color: red;
+    }
   </style>
   <div class="card" style="padding: 20px;">
     <div class="title">Opening Hours</div>
     <div class="time">
-        <div>Monday - Friday</div>
-        <div>5:00 PM - 9:00 PM</div>
+      <div>Monday - Friday</div>
+      <div>5:00 PM - 9:00 PM</div>
     </div>
     <div class="time">
-        <div>Saturday</div>
-        <div>10 AM - 4 PM</div>
+      <div>Saturday</div>
+      <div>10 AM - 4 PM</div>
     </div>
     <div class="time">
-        <div>Sunday</div>
-        <div class="closed">Closed</div>
+      <div>Sunday</div>
+      <div class="closed">Closed</div>
     </div>
-</div>
+  </div>
 
   <!-- footer -->
   <div id="footer">
@@ -731,15 +729,20 @@
       $('#footer').load("footer.html");
     });
   </script>
- 
-   <div id="scroller">
+  <footer class="fixed-bottom" id="fixed-foot"></footer>
+  <script>
+    $(function () {
+      $('#fixed-foot').load("fixed-footer.html");
+    });
+  </script>
+  <div id="scroller">
 
- </div>
- <script>
-   $(function () {
+  </div>
+  <script>
+    $(function () {
       $('#scroller').load("scroller.html");
     });
- </script> 
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>

@@ -166,17 +166,15 @@
 
 
 
-    <!-- sticky footer  -->
-    <footer class="footer mt-auto py-3 sticky-bottom" style="background-color: rgb(36, 36, 36);">
-      <div class="container footcont">
-        <button class="btn bg-light buttonFooter"><a href="./regitration.html" class="text-dark footerRegister">REGISTER
-            NOW</a>
-        </button>
-        <button class="btn bg-light buttonFooter"><a href="./courses.html" class="text-dark footerRegister">COURSES
-            OFFERED</a>
-        </button>
-      </div>
-    </footer>
+  <!-- fixed footer -->
+  <footer class="fixed-bottom" id="fixed-foot"></footer>
+  <script>
+    $(function () {
+      $('#fixed-foot').load("fixed-footer.html");
+    });
+  </script>
+<!-- fixed footer -->
+
 
     <div id="scroller">
 
