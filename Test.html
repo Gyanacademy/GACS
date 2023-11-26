@@ -600,107 +600,6 @@
     }
 
 
-    /*function gowhatsapp() {
-      let firstname = document.getElementById("firstName").value;
-      let lastname = document.getElementById("lastname").value;
-      let gender = document.getElementById("gender").value;
-      let dob = document.getElementById("dob").value;
-      let motherTongue = document.getElementById("m-tongue").value;
-      let pname = document.getElementById("pname").value;
-      let fatherOccupation = document.getElementById("occupation").value;
-      let motherName = document.getElementById("m-name").value;
-      let motherOccupation = document.getElementById("m-occupation").value;
-      let phone = document.getElementById("phone").value;
-      let parentsPhone = document.getElementById("pphone").value;
-      let email = document.getElementById("email").value;
-      let pphone = document.getElementById("pphone").value;
-      let houseBuildingno = document.getElementById("House-Building-no").value;
-      let Streetlocality = document.getElementById("Street-locality").value;
-      let district = document.getElementById("district").value;
-      let state = document.getElementById("state").value;
-      let pinCode = document.getElementById("pin-code").value;
-      var std = document.getElementById("std").value;
-      var scname = document.getElementById("scname").value;
-
-      var stream = document.getElementById("stream").value;
-      var mode = document.getElementById("mode").value;
-      var board = document.getElementById("board").value;
-      var ref = document.getElementById("ref").value;
-
-      var markedCheckbox = document.getElementsByName('sub');
-      var subjects = " ";
-      for (var i = 0; i < markedCheckbox.length; i++) {
-        if (markedCheckbox[i].checked) {
-          subjects += markedCheckbox[i].value + " ; ";
-
-        }
-      }
-
-      let url = "https://wa.me/918088263376?text=" +
-        "Name of the student : " + "*" +
-        firstname + " " + lastname + "*" +
-        "%0a" +
-        "%0a" +
-        "Students Contact Number: " +
-        phone +
-        "%0a" +
-        "%0a" +
-        "Gender : "
-        + gender +
-        "%0a" +
-        "%0a" +
-        "Date of Birth: "
-        + dob +
-        "%0a" +
-        "%0a" +
-        "Name of Father : "
-        + pname +
-        "%0a" +
-        "%0a" +
-        "Name of Mother : " + motherName +
-        "%0a" +
-        "%0a" +
-        "Parents Contact Number : "
-        + pphone +
-        "%0a" +
-        "%0a" +
-        "Email-ID : "
-        + email +
-        "%0a" +
-        "%0a" +
-        "Residential Address : "
-        + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
-        "%0a" +
-        "%0a" +
-        "Class Studying : "
-        + std +
-        "%0a" +
-        "%0a" +
-        "School/College Studying : " + "*"
-        + scname + "*" +
-        "%0a" +
-        "%0a" +
-        "Subjects Needed : "
-        + subjects +
-        "%0a" +
-        "%0a" +
-        "Stream : "
-        + stream +
-        "%0a" +
-        "%0a" +
-        "Mode of Teaching : " + "*" +
-        mode + "*" +
-        "%0a" +
-        "%0a" +
-        "Board : "
-        + board + "%0a" + "%0a" +
-        "Reference :" + ref;
-
-
-
-      window.open(url, "_blank").focus();
-    }*/
-
 
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
@@ -888,7 +787,108 @@
       ).catch(
         error => console.error('Error', error.message)
       );
-    
+           
+    function gowhatsapp() {
+      let firstname = document.getElementById("firstName").value;
+      let lastname = document.getElementById("lastname").value;
+      let gender = document.getElementById("gender").value;
+      let dob = document.getElementById("dob").value;
+      let motherTongue = document.getElementById("m-tongue").value;
+      let pname = document.getElementById("pname").value;
+      let fatherOccupation = document.getElementById("occupation").value;
+      let motherName = document.getElementById("m-name").value;
+      let motherOccupation = document.getElementById("m-occupation").value;
+      let phone = document.getElementById("phone").value;
+      let parentsPhone = document.getElementById("pphone").value;
+      let email = document.getElementById("email").value;
+      let pphone = document.getElementById("pphone").value;
+      let houseBuildingno = document.getElementById("House-Building-no").value;
+      let Streetlocality = document.getElementById("Street-locality").value;
+      let district = document.getElementById("district").value;
+      let state = document.getElementById("state").value;
+      let pinCode = document.getElementById("pin-code").value;
+      var std = document.getElementById("std").value;
+      var scname = document.getElementById("scname").value;
+
+      var stream = document.getElementById("stream").value;
+      var mode = document.getElementById("mode").value;
+      var board = document.getElementById("board").value;
+      var ref = document.getElementById("ref").value;
+
+      var markedCheckbox = document.getElementsByName('sub');
+      var subjects = " ";
+      for (var i = 0; i < markedCheckbox.length; i++) {
+        if (markedCheckbox[i].checked) {
+          subjects += markedCheckbox[i].value + " ; ";
+
+        }
+      }
+
+      let url = "https://wa.me/918088263376?text=" +
+        "Name of the student : " + "*" +
+        firstname + " " + lastname + "*" +
+        "%0a" +
+        "%0a" +
+        "Students Contact Number: " +
+        phone +
+        "%0a" +
+        "%0a" +
+        "Gender : "
+        + gender +
+        "%0a" +
+        "%0a" +
+        "Date of Birth: "
+        + dob +
+        "%0a" +
+        "%0a" +
+        "Name of Father : "
+        + pname +
+        "%0a" +
+        "%0a" +
+        "Name of Mother : " + motherName +
+        "%0a" +
+        "%0a" +
+        "Parents Contact Number : "
+        + pphone +
+        "%0a" +
+        "%0a" +
+        "Email-ID : "
+        + email +
+        "%0a" +
+        "%0a" +
+        "Residential Address : "
+        + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
+        "%0a" +
+        "%0a" +
+        "Class Studying : "
+        + std +
+        "%0a" +
+        "%0a" +
+        "School/College Studying : " + "*"
+        + scname + "*" +
+        "%0a" +
+        "%0a" +
+        "Subjects Needed : "
+        + subjects +
+        "%0a" +
+        "%0a" +
+        "Stream : "
+        + stream +
+        "%0a" +
+        "%0a" +
+        "Mode of Teaching : " + "*" +
+        mode + "*" +
+        "%0a" +
+        "%0a" +
+        "Board : "
+        + board + "%0a" + "%0a" +
+        "Reference :" + ref;
+
+
+delay(3000)b
+      window.open(url, "_blank").focus();
+  }
+  
     // Show a pop-up alert
     alert("Registration done successfully!");
     
