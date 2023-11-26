@@ -784,15 +784,8 @@
     //  sending form to google sheets
   </script>  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
-  function submitForm() {
-    // Code to send form data to Google Sheets (use appropriate API/library)
-    
-    // Code to send form data via email
-    
+  function submitForm(){
 
-
-  
-    
 
       var markedCheckbox = document.getElementsByName('sub');
       var subjects = " ";
@@ -884,9 +877,6 @@
 
         "Reference :" + ref;
 
-
-
-
       Email.send({
         SecureToken: "f5d1ba85-c160-427d-b0bb-e905d19db696 ",
         To: 'sngyan.acs@gmail.com',
@@ -904,7 +894,7 @@
     
     // Redirect to the home page
     window.location.href = "https://gyanacademy.github.io/GACS";
-  
+  }
 
   </script>
   <!-- <script src="./form.js"></script> -->
