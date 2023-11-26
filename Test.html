@@ -717,8 +717,8 @@
       }
       if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = 'Submit';
-        document.getElementById("nextBtn").setAttribute('type', 'submit');
-        document.getElementById("nextBtn").setAttribute('onsubmit', 'submitForm()');
+        //document.getElementById("nextBtn").setAttribute('type', 'submit');
+      //  document.getElementById("nextBtn").setAttribute('onsubmit', 'submitForm()');
         // document.getElementsByClassName("hidden").style.display = "block";
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
@@ -795,8 +795,8 @@
 
         }
       }
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzhcyJc_DYPwoOe1Qr2VGmVj7mmvf7sor5IH_E8vYPVmSBtS3fRQdjVFjsbSfdqPBdxQ/exec'
-      const form = document.forms['submit-to-google-sheets']
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzhcyJc_DYPwoOe1Qr2VGmVj7mmvf7sor5IH_E8vYPVmSBtS3fRQdjVFjsbSfdqPBdxQ/exec';
+      const form = document.forms['submit-to-google-sheets'];
 
       form.addEventListener('submit', e => {
         e.preventDefault()
