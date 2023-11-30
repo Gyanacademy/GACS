@@ -697,7 +697,14 @@
       const scriptURL = 'https://script.google.com/macros/s/AKfycbyzhcyJc_DYPwoOe1Qr2VGmVj7mmvf7sor5IH_E8vYPVmSBtS3fRQdjVFjsbSfdqPBdxQ/exec';
       const form = document.forms['submit-to-google-sheets'];
 
-      
+      //form.addEventListener('submit', e => {
+     //  e.preventDefault()
+        fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form),
+        }).then(response => console.log('Registered Successfully!'))
+          .catch(error => console.error('Error!', error.message));
+     
     
     
   
@@ -770,14 +777,7 @@
         "Reference :" + ref;
 
     
-//form.addEventListener('submit', e => {
-     //  e.preventDefault()
-        fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form),
-        }).then(response => console.log('Registered Successfully!'))
-          .catch(error => console.error('Error!', error.message))
-     
+
       Email.send({
         SecureToken: "f5d1ba85-c160-427d-b0bb-e905d19db696 ",
         To: 'sngyan.acs@gmail.com',
