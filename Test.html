@@ -256,7 +256,7 @@
 
           <div class="row register-form">
             <div class="col-md-12">
-             <form autocomplete="off" method="POST" id="regForm" name="submit-to-google-sheets"
+              <form autocomplete="off" method="POST" id="regForm" name="submit-to-google-sheets"
                 action="javascript:submitForm()">
 
                 <!-- step-1 students details -->
@@ -525,8 +525,7 @@
                   Terms & Conditions
                   and I have read it <a href="./terms.html">Terms and Conditions</a><br><br>
 
-             
-                  
+
                 </div>
                 
 
@@ -600,8 +599,112 @@
       }
     }
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
+
+    /*function gowhatsapp() {
+      let firstname = document.getElementById("firstName").value;
+      let lastname = document.getElementById("lastname").value;
+      let gender = document.getElementById("gender").value;
+      let dob = document.getElementById("dob").value;
+      let motherTongue = document.getElementById("m-tongue").value;
+      let pname = document.getElementById("pname").value;
+      let fatherOccupation = document.getElementById("occupation").value;
+      let motherName = document.getElementById("m-name").value;
+      let motherOccupation = document.getElementById("m-occupation").value;
+      let phone = document.getElementById("phone").value;
+      let parentsPhone = document.getElementById("pphone").value;
+      let email = document.getElementById("email").value;
+      let pphone = document.getElementById("pphone").value;
+      let houseBuildingno = document.getElementById("House-Building-no").value;
+      let Streetlocality = document.getElementById("Street-locality").value;
+      let district = document.getElementById("district").value;
+      let state = document.getElementById("state").value;
+      let pinCode = document.getElementById("pin-code").value;
+      var std = document.getElementById("std").value;
+      var scname = document.getElementById("scname").value;
+
+      var stream = document.getElementById("stream").value;
+      var mode = document.getElementById("mode").value;
+      var board = document.getElementById("board").value;
+      var ref = document.getElementById("ref").value;
+
+      var markedCheckbox = document.getElementsByName('sub');
+      var subjects = " ";
+      for (var i = 0; i < markedCheckbox.length; i++) {
+        if (markedCheckbox[i].checked) {
+          subjects += markedCheckbox[i].value + " ; ";
+
+        }
+      }
+
+      let url = "https://wa.me/918088263376?text=" +
+        "Name of the student : " + "*" +
+        firstname + " " + lastname + "*" +
+        "%0a" +
+        "%0a" +
+        "Students Contact Number: " +
+        phone +
+        "%0a" +
+        "%0a" +
+        "Gender : "
+        + gender +
+        "%0a" +
+        "%0a" +
+        "Date of Birth: "
+        + dob +
+        "%0a" +
+        "%0a" +
+        "Name of Father : "
+        + pname +
+        "%0a" +
+        "%0a" +
+        "Name of Mother : " + motherName +
+        "%0a" +
+        "%0a" +
+        "Parents Contact Number : "
+        + pphone +
+        "%0a" +
+        "%0a" +
+        "Email-ID : "
+        + email +
+        "%0a" +
+        "%0a" +
+        "Residential Address : "
+        + houseBuildingno + "," + Streetlocality + ", " + district + ", " + state + ", " + pinCode +
+        "%0a" +
+        "%0a" +
+        "Class Studying : "
+        + std +
+        "%0a" +
+        "%0a" +
+        "School/College Studying : " + "*"
+        + scname + "*" +
+        "%0a" +
+        "%0a" +
+        "Subjects Needed : "
+        + subjects +
+        "%0a" +
+        "%0a" +
+        "Stream : "
+        + stream +
+        "%0a" +
+        "%0a" +
+        "Mode of Teaching : " + "*" +
+        mode + "*" +
+        "%0a" +
+        "%0a" +
+        "Board : "
+        + board + "%0a" + "%0a" +
+        "Reference :" + ref;
+
+
+
+      window.open(url, "_blank").focus();
+    }*/
+
+
+    var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
+
     function showTab(n) {
       // This function will display the specified tab of the form...
       var x = document.getElementsByClassName("form-group");
@@ -615,50 +718,8 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
       if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHTML = 'Submit';
         document.getElementById("nextBtn").setAttribute('type', 'submit');
-      } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-      }
-      //... and run a function that will display the correct step indicator:
-      fixStepIndicator(n)
-    }
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("form-group");
-      // Exit the function if any field in the current tab is invalid:
-      if (n == 1 && !validateForm())
-        return false;
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // if you have reached the end of the form...
-      if (currentTab == x.length) {
-        // ... the form gets submitted:
+      //  document.getElementById("nextBtn").setAttribute('onsubmit', 'submitForm()');
         // document.getElementsByClassName("hidden").style.display = "block";
-        document.getElementById("regForm").submit();
-        return true;
-      }
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
-
-  /*  var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
-
-    function showTab(n) {
-      // This function will display the specified tab of the form...
-      var x = document.getElementsByClassName("form-group");
-      x[n].style.display = "block";
-      //... and fix the Previous/Next buttons:
-      if (n == 0) {
-        document.getElementById("prevBtn").style.display = "none";
-      } else {
-        document.getElementById("prevBtn").style.display = "inline";
-      }
-      if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHtml = 'Submit';
-        document.getElementById("nextBtn").setAttribute('type', 'submit');
-
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
       }
@@ -687,7 +748,7 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
       // Otherwise, display the correct tab:
       showTab(currentTab);
 
-    }*/
+    }
 
     function validateForm() {
       // This function deals with validation of the form fields
@@ -738,13 +799,13 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
       const form = document.forms['submit-to-google-sheets'];
 
       //form.addEventListener('submit', e => {
-     //  e.preventDefault()
+       // e.preventDefault()
         fetch(scriptURL, {
           method: 'POST',
           body: new FormData(form),
         }).then(response => console.log('Registered Successfully!'))
           .catch(error => console.error('Error!', error.message))
-     
+     // });
     
     
   
@@ -816,8 +877,6 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
 
         "Reference :" + ref;
 
-    
-
       Email.send({
         SecureToken: "f5d1ba85-c160-427d-b0bb-e905d19db696 ",
         To: 'sngyan.acs@gmail.com',
@@ -829,20 +888,16 @@ var currentTab = 0; // Current tab is set to be the first tab (0)
       ).catch(
         error => console.error('Error', error.message)
       );
-
-
     
-      
     // Show a pop-up alert
     alert("Registration done successfully!");
     
     // Redirect to the home page
     window.location.href = "https://gyanacademy.github.io/GACS";
-    )
-  }
+ ) }
 
   </script>
   <!-- <script src="./form.js"></script> -->
 </body>
 
-</html>
+                                                                                                              </html>
