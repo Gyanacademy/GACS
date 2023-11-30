@@ -525,8 +525,7 @@
                   Terms & Conditions
                   and I have read it <a href="./terms.html">Terms and Conditions</a><br><br>
 
-             <button type="button" id="Submit" onclick="submitForm()" style="border-radius:10px; display:none;">Submit</button>
-
+             
                   
                 </div>
                 
@@ -617,11 +616,10 @@
         document.getElementById("prevBtn").style.display = "inline";
       }
       if (n == (x.length - 1)) {
-      //  document.getElementById("nextBtn").innerHtml = "Submit";
-        document.getElementById("nextBtn").style.display = "none";
-        document.getElementById("Submit").style.display = "inline";
-    //   document.getElementById("nextBtn").setAttribute('type', 'submit');
-      //  document.getElementById("nextBtn").setAttribute('onsubmit', 'submitForm()');
+        document.getElementById("nextBtn").innerHtml = "Submit";
+    
+   //   document.getElementById("nextBtn").setAttribute('type', 'submit');
+       document.getElementById("nextBtn").setAttribute('onclick', 'submitForm()');
         // document.getElementsByClassName("hidden").style.display = "block";
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
