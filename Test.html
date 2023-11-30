@@ -257,7 +257,7 @@
           <div class="row register-form">
             <div class="col-md-12">
               <form autocomplete="off" method="POST" id="regForm" name="submit-to-google-sheets"
-                action="">
+                action="javascript:submitForm()">
 
                 <!-- step-1 students details -->
                 <div class="form-group">
@@ -618,8 +618,8 @@
       if (n == (x.length - 1)) {
         document.getElementById("nextBtn").innerHtml = "Submit";
     
-   //   document.getElementById("nextBtn").setAttribute('type', 'submit');
-       document.getElementById("nextBtn").setAttribute('onclick', 'submitForm()');
+   document.getElementById("nextBtn").setAttribute('type', 'submit');
+  // document.getElementById("nextBtn").setAttribute('onclick', 'submitForm()');
         // document.getElementsByClassName("hidden").style.display = "block";
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
