@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="google-site-verification" content="f5AtttUIkn-Zl6y8JYASMprBIsdYXn807ZBjbcRgS-Y" />
   <meta name="description"
     content="Welcome to Gyan Acadmey of Commerce & Science , We Welcome Students to the Workd of Knowledge" />
@@ -14,7 +15,7 @@
   <meta name="robots" content="index , follow">
   <link rel="canonical" href="https://gyanacademy.github.io/GACS" />
   <meta property="og:url" content="https://gyanacademy.github.io/GACS">
-  <meta property="og:image" content="./1684860389440.webp>
+  <meta property="og:image" content="./1684860389440.webp">
   <meta property=" og:description"
     content="Welcome to Gyan Acadmey of Commerce & Science , We Welcome Students to the Workd of Knowledge">
   <meta property="og:title" content="Gyan Academy">
@@ -32,9 +33,9 @@
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io(1)/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io(1)/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io(1)/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io(1)\favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (1)/favicon.ico">
-  <link rel="manifest" href="favicon_io(1)/site.webmanifest">
+  <link rel="manifest" href="favicon_io (1)\site.webmanifest">
   <link rel="stylesheet" href="swiper-bundle.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <title>
@@ -64,10 +65,44 @@
       $('#navbar').load("header.html");
     });
   </script>
+
+
+
   <!-- //header -->
+  <div id="preloader">
+    <div class="loader-content">
+        <img src="./1684860389440.webp" alt="Your Website Logo"><br>
+        <h1>Welcome to Gyan Academy of Commerce & Science</h1>
+        <span>Loading...</span>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+</div>
 
+<div id="content">
+    <h1>Welcome to My Website</h1>
+    <p>This is a placeholder for your website content.</p>
+</div>
 
-
+<script>window.addEventListener("load", function() {
+  // Fetch your website content here (replace with your actual fetch call)
+  fetch("index.html")
+      .then(response => response.text())
+      .then(content => {
+          // Update content div with fetched content
+          document.getElementById("content").innerHTML = content;
+          
+          // Fade out preloader only after content is updated
+          document.getElementById("preloader").style.display="none";
+          document.getElementById("preloader").style.transition = "opacity 0.5s ease-in-out";
+      })
+      .catch(error => {
+          // Handle any errors in fetching content
+          console.error(error);
+      });
+});
+</script>
   <!-- landing image -->
   <div class="parentContainer">
     <img class="landing-img" src="./master Your skills-min.png" alt="Landscape">
@@ -100,11 +135,18 @@
           height="500" style="margin-left:25px;">
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Welcome to <br> Gyan Academy of Commerce & Science</h1>
-        <p class="lead">A leading coaching institute in Bengaluru,karnataka.With strong commitment to excellence,we
-          strive to provide high-quality education and guidance to students in the field of commerce & science. <br><br>
-          At Gyan Academy of Commerce & Science <strong><q>We welcome Students to the world of
-              Knowledge</q></strong><br><br>
+        <h1 class="display-5 fw-bold lh-1 mb-3">
+          Welcome to <br> Gyan Academy of Commerce & Science</h1>
+          At Gyan Academy of Commerce & Science <br>
+          <strong><q>
+            We welcome Students to the world of
+          Knowledge
+        </q></strong>
+        <br><br>
+        <p class="lead">We
+          strive to provide high-quality education and guidance to students in the field of commerce & science.A leading coaching institute in Bengaluru,karnataka.With strong commitment to excellence,
+           <br><br>
+          
           Our experienced faculties and qualified tutors and comprehensive study materials ensure that our student
           recieve the best possible learning experience.Whether you are preparing for competitive exams or seeking
           academic support, Gyan Academy is here to empower you with knowledge and help you achieve your goals.
@@ -127,7 +169,7 @@
           <h5 class="card-title text-light">Personalised Tutoring</h5>
           <p class="card-text text-light">Get one on one attention and tailored lesson plans to help you suceed in any
             subject.</p>
-          <a href="./about.html" class="btn btn-primary">More info -></a>
+          <!-- <a href="./about.html" class="btn btn-primary">More info -></a> -->
         </div>
       </div>
       <div class="card" style="width: 18rem;padding: 8px;background-color: rgb(77, 75, 75);">
@@ -137,7 +179,7 @@
           <h5 class="card-title  text-light">Carrirer Guidance Coaching</h5>
           <p class="card-text  text-light">Navigate your carrer path with confidence and recieve valuable guidance from
             our experienced Coaches.</p>
-          <a href="./career.html" class="btn btn-primary">View More -></a>
+          <!-- <a href="./career.html" class="btn btn-primary">View More -></a> -->
         </div>
       </div>
       <div class="card" style="width: 18rem;padding: 8px;background-color: rgb(77, 75, 75);">
@@ -147,7 +189,7 @@
           <h5 class="card-title  text-light">Group Classes</h5>
           <p class="card-text  text-light">Join our group classes to learn and grow with peers in a supportive
             environment.</p>
-          <a href="./about.html" class="btn btn-primary">More info -></a>
+          <!-- <a href="./about.html" class="btn btn-primary">More info -></a> -->
         </div>
       </div>
       <div class="card" style="width: 18rem;padding: 8px;background-color: rgb(77, 75, 75);">
@@ -157,7 +199,7 @@
           <h5 class="card-title  text-light">Exam Prep</h5>
           <p class="card-text  text-light">Our Experienced tutors will help you prepare for upcoming exams and achieve
             your goals.</p>
-          <a href="./gallery.html" class="btn btn-primary">View More -></a>
+          <!-- <a href="./gallery.html" class="btn btn-primary">View More -></a> -->
         </div>
       </div>
     </div>
@@ -735,8 +777,9 @@
       $('#fixed-foot').load("fixed-footer.html");
     });
   </script>
-  <div id="scroller">
 
+
+  <div id="scroller">
   </div>
   <script>
     $(function () {

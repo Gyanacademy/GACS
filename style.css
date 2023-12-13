@@ -801,3 +801,67 @@ figcaption {
     margin-left: 10px;
   }
 }
+
+
+.register-btn{
+  background-color: transparent ;
+  color: white;
+  border:1px solid white;
+  margin: 0;
+  border-radius:5px;
+  padding: 4px;
+}
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff; /* Adjust background color */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-content {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.loader-content img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: auto;
+  height: 10px;
+  margin-top: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.progress {
+  width: 0;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+#content {
+  display: none;
+}
