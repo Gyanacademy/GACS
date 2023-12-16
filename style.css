@@ -455,6 +455,7 @@ div .search-items ul li {
 
 
 .btn-enroll {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,6 +467,7 @@ div .search-items ul li {
 .landing-h1 {
   font-weight: bolder;
   font-size: 5rem;
+ text-shadow: 2px 0.5px orange;
 }
 
 .landing-p {
@@ -484,12 +486,13 @@ div .search-items ul li {
   position: relative;
   height: 100%;
   width: 100%;
+  opacity:0.45;
 }
 
 .parentContainer {
   position: relative;
   text-align: center;
-  color: black;
+  color: rgb(13, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -497,7 +500,7 @@ div .search-items ul li {
 
 figcaption {
   position: absolute;
-  top: 8%;
+  top: 25%;
   bottom: 10%;
   left: 4%;
 }
@@ -620,7 +623,7 @@ figcaption {
 
 @media (max-width:345px) {
   figcaption {
-    top: 1.8%;
+    top: 15%;
   }
 
   .landing-h1 {
@@ -633,7 +636,7 @@ figcaption {
   }
 
   .landing-p2 {
-    margin-top: 1.9%;
+    margin-top: 1%;
     font-size: 0.8rem;
   }
 
@@ -853,6 +856,7 @@ figcaption {
   animation: progress 2s linear infinite;
 }
 
+
 @keyframes progress {
   from {
       width: 0;
@@ -864,4 +868,27 @@ figcaption {
 
 #content {
   display: none;
+}
+
+
+.loader {
+  border: 8px solid #8d8c8c;
+  border-radius: 50%;
+  border-top: 8px solid #ead708;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin:auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
