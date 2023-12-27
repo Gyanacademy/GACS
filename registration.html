@@ -393,9 +393,9 @@
                     class="formError"></span><br>
                   <label for="pin-code" class="labl" id="address"><strong>Enter your Pincode
                       *</strong></label><br>
-                  <input type="number" name="pin-code" id="pin-code" class="form-control"
-                    placeholder="Enter Your Pin-code*" value="" required style="width:100%;height:2.5rem;"
-                    autocomplete="street-address" /> <br><span class="formError"></span>
+                  <input type="text" name="pin-code" id="pin-code" class="form-control"
+                    placeholder="Enter Your Pin-code*" pattern="[0-9]{6,6}" value="" required style="width:100%;height:2.5rem;" 
+                     oninvalid="setCustomValidity('Enter Numbers only upto 6 Numbers')" maxlength="6"/> <br><span class="formError"></span>
 
                 </div>
 
@@ -474,25 +474,27 @@
                   <br>
                   <div class="check">
 
-                    <input type="checkbox" name="sub" id="subjects" value="Accountancy" aria-details="Accountancy">
-                    Accountancy<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Economics">
+                    <input type="checkbox" name="sub" id="acc" value="Accountancy" aria-details="Accountancy"><label for="acc">Accountancy</label>
+                    <br>
+                    <input type="checkbox" name="sub" id="eco" value="Economics">
+                    <label for="eco">Economics</label>
 
-                    Economics<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Business Studies">Business Studies<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Computer Science">Computer Science<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Mathematics">Mathematics<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Science">Science<br>
-                    <input type="checkbox" name="sub" id="subjects" value="physics">Physics<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Chemistry">Chemistry<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Biology">Biology<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Hindi">Hindi<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Kannada">Kannada<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Commercial Studies">Commercial Studies<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Commercial Application">Commercial
-                    Application<br>
-                    <input type="checkbox" name="sub" id="subjects" value="Others">Others(For other subjects Please
-                    contact Administrator)
+                    <br>
+                    <input type="checkbox" name="sub" id="bst" value="Business Studies"><label for="bst">Business Studies</label><br>
+                    <input type="checkbox" name="sub" id="Cs" value="Computer Science"><label for="Cs">Computer Science</label><br>
+                    <input type="checkbox" name="sub" id="maths" value="Mathematics"><label for="maths">Mathematics</label><br>
+                    <input type="checkbox" name="sub" id="science" value="Science"><label for="science">Science</label> <br>
+                    <input type="checkbox" name="sub" id="Physics" value="physics"><label for="Physics">Physics</label><br>
+                    <input type="checkbox" name="sub" id="chem" value="Chemistry"><label for="chem">Chemistry</label><br>
+                    <input type="checkbox" name="sub" id="bio" value="Biology"><label for="bio">Biology</label>
+                    <br>
+                    <input type="checkbox" name="sub" id="hin" value="Hindi"><label for="hin">Hindi</label><br>
+                    <input type="checkbox" name="sub" id="kan" value="Kannada"><label for="kan">Kannada</label> <br>
+                    <input type="checkbox" name="sub" id="com-st" value="Commercial Studies"><label for="com-st">Commercial Studies</label><br>
+                    <input type="checkbox" name="sub" id="com-app" value="Commercial Application"><label for="com-app">Commercial
+                    Application</label><br>
+                    <input type="checkbox" name="sub" id="other" value="Others"><label for="other">Others(For other subjects Please
+                    contact Administrator)</label>
 
                   </div>
 
@@ -520,14 +522,14 @@
                   <br><span class="formError"></span>
                   <br>
 
-                  <input type="checkbox" name="policy" id="subjects" value="iAgree" required> I ,
+                  <input type="checkbox" name="policy" id="privacy"value="iAgree" required><label for="privacy"> I ,
                   agree all privacy &
-                  policy and I have read it <a href="./privacy.html">Privacy and Policy</a><br><br>
-                  <input type="checkbox" name="terms" id="t&c" value="iAgree" required> I , agree all
+                  policy and I have read it <a href="./privacy">Privacy and Policy</a></label><br><br>
+                  <input type="checkbox" name="terms" id="t&c" value="iAgree" required> <label for="t&c">I , agree all
                   Terms & Conditions
-                  and I have read it <a href="./terms.html">Terms and Conditions</a><br><br>
-
-
+                  and I have read it <a href="./terms">Terms and Conditions</a>
+                </label>
+                <br><br>
                 </div>
                 
 
