@@ -28,8 +28,10 @@
     content="Welcome to Gyan Acadmey of Commerce & Science , We Welcome Students to the Workd of Knowledge">
   <meta name="twitter:image" content="./1684860389440.webp">
   <meta name="robots" content="index, follow">
-
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
+  <meta name="theme-color" content="#212529" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name = "msapplication-navbutton-color" content = "#393939">
+  <meta name = "apple-mobile-web-app-status-bar-style" content = "black or black-translucent">
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io(1)/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io(1)/favicon-32x32.png">
@@ -54,7 +56,20 @@
     gtag('config', 'G-C39GZ69BSR');
   </script>
 </head>
+<style>
+      @media (prefers-color-scheme: dark) {
+            /* Dark mode color for progress bar */
+            ::-webkit-progress-bar {
+                background-color: grey !important; /* Replace with your desired dark mode color */
+            }
 
+            /* Dark mode color for filled portion of progress bar */
+            ::-webkit-progress-value {
+                background-color: yellow !important; /* Replace with your desired dark mode color */
+            }
+          }
+
+</style>
 <body style="background-color: rgb(219, 218, 218);">
   <!-- header -->
   <div id="navbar" class="sticky-top">
