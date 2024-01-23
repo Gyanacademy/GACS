@@ -30,8 +30,8 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#212529" />
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name = "msapplication-navbutton-color" content = "#393939">
-  <meta name = "apple-mobile-web-app-status-bar-style" content = "black or black-translucent">
+  <meta name="msapplication-navbutton-color" content="#393939">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black or black-translucent">
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io(1)/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon_io(1)/favicon-32x32.png">
@@ -57,19 +57,22 @@
   </script>
 </head>
 <style>
-      @media (prefers-color-scheme: dark) {
-            /* Dark mode color for progress bar */
-            ::-webkit-progress-bar {
-                background-color: grey !important; /* Replace with your desired dark mode color */
-            }
+  @media (prefers-color-scheme: dark) {
 
-            /* Dark mode color for filled portion of progress bar */
-            ::-webkit-progress-value {
-                background-color: yellow !important; /* Replace with your desired dark mode color */
-            }
-          }
+    /* Dark mode color for progress bar */
+    ::-webkit-progress-bar {
+      background-color: grey !important;
+      /* Replace with your desired dark mode color */
+    }
 
+    /* Dark mode color for filled portion of progress bar */
+    ::-webkit-progress-value {
+      background-color: yellow !important;
+      /* Replace with your desired dark mode color */
+    }
+  }
 </style>
+
 <body style="background-color: rgb(219, 218, 218);">
   <!-- header -->
   <div id="navbar" class="sticky-top">
@@ -550,9 +553,9 @@
     <p style="text-align: center;font-weight: bolder;">________________</p>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <!-- <div class="carousel-item active">
           <img src="./IMG-20230419-WA0005.jpg" class="d-block w-100" alt="...">
-        </div>
+        </div> -->
         <div class="carousel-item">
           <img src="./IMG-20230419-WA0006.jpg" class="d-block w-100" alt="...">
         </div>
@@ -660,7 +663,7 @@
   </div>
   <br><br><br>
   <!-- map -->
-  <div class="col">
+  <!-- <div class="col">
     <div class="card shadow-sm" style="padding: 3px;height: auto;">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1155.973860677019!2d77.61659347925692!3d12.957955200114037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15504f44ccd9%3A0x5e34233a39f8b47!2sGyan%20Academy%20Of%20Commerce%20And%20Science!5e0!3m2!1sen!2sin!4v1684685879247!5m2!1sen!2sin"
@@ -668,7 +671,7 @@
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </div>
-  </div>
+  </div> -->
   <style>
     .title {
       font-size: 24px;
@@ -700,6 +703,123 @@
       <div class="closed">Closed</div>
     </div>
   </div>
+
+<!-- FAQs -->
+  <div class="flex-column p-3 my-3 shadow-lg">
+    <h3 class="text-center">Frequently Asked Questions-FAQs</h3>
+    <!-- question 1 -->
+    <div class="dropdown flex">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: What programs and courses does your educational academy offer?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li>A: We offer a wide range of programs and courses, including academic subjects, test preparation,
+          language learning, professional development, and enrichment classes.</li>
+      </ul>
+    </div>
+    <!-- question 2 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: How can I enroll in a course at your academy?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li>A: To enroll in a course, you can visit our website and complete the online registration form.
+          Alternatively, you can also visit our campus and register in person at our admissions office.</li>
+      </ul>
+    </div>
+    <!-- question 3 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Who can enroll in your educational academy?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li> A: Our academy is open to students of all ages, from preschoolers to adults. We provide tailored programs
+          for different age groups and learning needs.</li>
+      </ul>
+    </div>
+    <!-- question 4 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Are your instructors qualified and experienced?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li> A: Yes, we take great pride in our team of qualified and experienced instructors. They are subject matter
+          experts and skilled educators who are dedicated to providing high-quality instruction.</li>
+      </ul>
+    </div>
+    <!-- question 5 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: What teaching methods does your academy use?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li> A: We employ a variety of teaching methods, including interactive lectures, group discussions, hands-on
+          activities, and multimedia resources. Our aim is to create an engaging and effective learning environment.
+        </li>
+      </ul>
+    </div>
+
+    <!-- question 6 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: How are the class sizes at your academy?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li> A: We strive to maintain small class sizes to ensure personalized attention and effective student-teacher
+          interaction. The specific class sizes may vary depending on the program and age group.</li>
+      </ul>
+    </div>
+    <!-- question 7 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Can I get a refund if I need to cancel my enrollment?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li> A: Our refund policy varies depending on the program and the timing of the cancellation. Please refer to our enrollment terms and conditions or contact our admissions office for more information.</li>
+      </ul>
+    </div>
+    <!-- question 8 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Is financial aid or scholarships available for students?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li>  A: We have various financial aid and scholarship options available for eligible students. These opportunities are typically based on merit or financial need. Please inquire with our admissions office for more details.</li>
+      </ul>
+    </div>
+    <!-- question 9 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Do you offer online courses or distance learning programs?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li>  A: Yes, we offer online courses and distance learning programs for individuals who prefer flexible learning options or cannot attend classes on campus. These courses are designed to provide a comparable learning experience to our in-person classes.</li>
+      </ul>
+    </div>
+    <!-- question 10 -->
+    <div class="dropdown flex my-3">
+      <button class="btn btn-secondary dropdown-toggle border shadow-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="width: 100%;">
+        Q: Are there any extracurricular activities or events organized by the academy?
+      </button>
+      <ul class="dropdown-menu p-2" style="width: 100%;">
+        <li>  A: Yes, we encourage the holistic development of our students and organize extracurricular activities, workshops, seminars, and events throughout the year. These events provide opportunities for students to showcase their talents, develop new skills, and engage with their peers.</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
 
   <!-- footer -->
   <div id="footer">
